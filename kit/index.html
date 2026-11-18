@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlantiqX Brand Kit</title>
+<link rel="stylesheet" href="../brand/tokens.css">
+<style>
+/* Kit-level semantic tokens, built on ../brand/tokens.css (8-pt grid) */
+:root{
+  --bg-page:var(--paper); --bg-inverse:var(--night); --bg-brand:var(--purple);
+  --text-primary:var(--ink); --text-secondary:#46434F; --text-tertiary:var(--steel); --text-inverse:#FFFFFF;
+  --border-primary:var(--line); --accent-cta:var(--orange);
+  --status-live:var(--ok); --status-deployed:var(--purple); --status-piloting:var(--uat); --status-roadmap:var(--steel);
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:40px; --s6:48px; --s8:64px; --s10:80px; --s12:96px;
+  --mx:120px; --top:88px;
+}
+@page{size:1920px 1080px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#DCD9D1;overflow-x:hidden;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:var(--f-body);color:var(--text-primary);padding:16px 0;-webkit-font-smoothing:antialiased}
+img{display:block}
+.page{width:1920px;height:1080px;position:relative;overflow:hidden;background:var(--bg-page);margin:0 auto 16px;zoom:var(--z,1);break-after:page;page-break-after:always}
+html.one body{padding:0}html.one .page{display:none;margin:0}html.one .page.on{display:block}
+@media print{html{background:none}body{padding:0}.page{zoom:1!important;margin:0}}
+
+/* Running parts */
+.folio{position:absolute;left:var(--mx);right:var(--mx);bottom:40px;display:flex;justify-content:space-between;font:500 13px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary)}
+.folio b{font-weight:500;color:var(--text-primary);margin-right:16px}
+.night .folio,.night .folio b{color:#8F8B99}
+.head{position:absolute;left:var(--mx);right:var(--mx);top:var(--top);display:grid;grid-template-columns:repeat(12,1fr);column-gap:40px;align-items:end;height:160px}
+.head h2{grid-column:1/7;font:700 72px/1.05 var(--f-head);letter-spacing:-.03em}
+.head p{grid-column:7/13;font:400 22px/1.5 var(--f-body);color:var(--text-secondary);max-width:720px}
+.body{position:absolute;left:var(--mx);right:var(--mx);top:296px;bottom:96px}
+.g12{display:grid;grid-template-columns:repeat(12,1fr);column-gap:40px}
+.h3{font:600 28px/1.2 var(--f-head);letter-spacing:-.01em}
+.h4{font:600 22px/1.25 var(--f-head);letter-spacing:-.01em}
+.p{font:400 18px/1.55 var(--f-body);color:var(--text-secondary)}
+.sm{font:400 15px/1.5 var(--f-body);color:var(--text-secondary)}
+.lab{font:500 13px/1.4 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary)}
+.mono{font-family:var(--f-mono)}
+.rule{border-top:1px solid var(--border-primary)}
+
+/* Wordmark: "Plantiq" + X mark sitting on the baseline at cap height */
+.wm{display:inline-block;font-family:var(--f-head);font-weight:700;color:var(--purple);letter-spacing:-.035em;line-height:1;white-space:nowrap}
+.wm img{display:inline-block;height:.8em;width:auto;vertical-align:-.05em;margin-left:-.02em}
+.wm.w{color:#fff}
+
+/* Status badges */
+.badge{display:inline-flex;align-items:center;gap:10px;font:500 13px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:#fff;border:1px solid var(--border-primary);padding:8px 12px 8px 10px;white-space:nowrap}
+.badge i{width:8px;height:8px;display:block;flex:none}
+.b-live i{background:var(--status-live)} .b-dep i{background:var(--status-deployed)} .b-pil i{background:var(--status-piloting)} .b-road i{border:1.5px solid var(--status-roadmap)}
+.badge.dk{background:#1C1A22;border-color:#2E2B36;color:#fff}
+
+.night{background:var(--night);color:#fff}
+.cover-photo{position:absolute;right:0;top:0;width:1080px;height:1080px;clip-path:polygon(777px 0,100% 0,100% 100%,0 100%)}
+.cover-photo img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.fill{width:100%;height:100%;object-fit:cover}
+.logo{display:block;width:auto;max-width:none}
+</style>
+</head>
+<body>
+
+<!-- 01 COVER -->
+<section class="page night" id="p1">
+  <div class="cover-photo"><img src="../img/13-night-shift.jpg" alt="Night shift on a plant floor"></div>
+  <div style="position:absolute;left:var(--mx);top:120px">
+    <img class="logo" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX" style="height:168px;">
+    <p style="font:500 40px/1.2 var(--f-head);letter-spacing:-.01em;color:#D9D6E0;margin-top:40px">Where Minds and Machines Merge</p>
+  </div>
+  <div style="position:absolute;left:var(--mx);bottom:96px">
+    <p style="font:600 64px/1 var(--f-head);letter-spacing:-.03em">Brand Kit</p>
+    <p class="lab" style="color:#8F8B99;margin-top:24px">v1 &nbsp;·&nbsp; Prepared by Busy Fox &nbsp;·&nbsp; November 2026</p>
+  </div>
+</section>
+
+<!-- 02 CONTENTS -->
+<section class="page" id="p2">
+  <div style="position:absolute;left:var(--mx);top:var(--top);width:680px">
+    <h2 style="font:700 72px/1.05 var(--f-head);letter-spacing:-.03em">Contents</h2>
+    <p class="p" style="font-size:22px;margin-top:40px">This kit sets out how PlantiqX looks and sounds, so every page, post and proposal reads as one company.</p>
+    <p class="p" style="margin-top:24px">It is built on the brand rules in the PlantiqX Company Profile: purple and orange as the signature pair, Space Grotesk and IBM Plex Sans, and a plain, plant-floor voice. Where this kit proposes something new, the page says so.</p>
+  </div>
+  <div style="position:absolute;left:var(--mx);bottom:120px"><img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX" style="height:56px;"></div>
+  <ol style="position:absolute;left:1000px;right:var(--mx);top:var(--top);list-style:none">
+    <style>#p2 li{display:flex;align-items:baseline;gap:32px;height:64px;border-bottom:1px solid var(--line);padding-top:18px;font:500 28px/1 var(--f-head);letter-spacing:-.01em}#p2 li span{font:500 14px/1 var(--f-mono);letter-spacing:.08em;color:var(--steel);width:32px}</style>
+    <li><span>03</span>The idea</li>
+    <li><span>04</span>Logo</li>
+    <li><span>05</span>Logo in use</li>
+    <li><span>06</span>Logo misuse</li>
+    <li><span>07</span>Colour</li>
+    <li><span>08</span>Accessible colour pairs</li>
+    <li><span>09</span>Typography</li>
+    <li><span>10</span>Voice and tone</li>
+    <li><span>11</span>Photography</li>
+    <li><span>12</span>Graphic device and status</li>
+    <li><span>13</span>Module naming (proposal)</li>
+    <li><span>14</span>Applications</li>
+    <li><span>15</span>Contact and next steps</li>
+  </ol>
+  <div class="folio"><span><b>02</b>Contents</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 03 IDEA -->
+<section class="page" id="p3">
+  <div style="position:absolute;left:var(--mx);top:72px;font:700 200px/1 var(--f-head);letter-spacing:-.04em;white-space:nowrap">
+    Plant <span style="color:var(--steel);font-weight:400">+</span> IQ <span style="color:var(--steel);font-weight:400">+</span> <img src="../brand/mark.svg" alt="X" style="display:inline-block;height:.8em;vertical-align:-.05em">
+  </div>
+  <div class="g12" style="position:absolute;left:var(--mx);right:var(--mx);top:360px">
+    <div style="grid-column:1/5"><p class="lab">Plant</p><p class="h3" style="margin-top:16px">The whole plant</p><p class="p" style="margin-top:16px">Shop floor, gate, stores, panel room and back office. PlantiqX is built around how the entire plant runs, not one department.</p></div>
+    <div style="grid-column:5/9"><p class="lab">IQ</p><p class="h3" style="margin-top:16px">Intelligence from the plant's own data</p><p class="p" style="margin-top:16px">Readings from motors, meters, gates and cameras, turned into decisions a plant head can act on in the same shift.</p></div>
+    <div style="grid-column:9/13"><p class="lab">X</p><p class="h3" style="margin-top:16px">The X-factor</p><p class="p" style="margin-top:16px">Every solution is fitted to the plant's real problem. The X is the part we tailor, and it is the mark in the logo.</p></div>
+  </div>
+  <div class="g12 rule" style="position:absolute;left:var(--mx);right:var(--mx);top:640px;padding-top:48px">
+    <p style="grid-column:1/7;font:600 56px/1.1 var(--f-head);letter-spacing:-.025em;color:var(--purple)">Where Minds and Machines Merge</p>
+    <div style="grid-column:7/13">
+      <p class="p" style="font-size:20px;color:var(--ink)">Minds are the plant heads, engineers, operators and guards who run the plant. Machines are the furnaces, motors, meters and gates they run. PlantiqX puts both on the same live data.</p>
+      <p class="sm" style="margin-top:16px">Write the tagline exactly as shown: title case, no full stop, never shortened or reworded.</p>
+    </div>
+  </div>
+  <div class="folio"><span><b>03</b>The idea</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 04 LOGO -->
+<section class="page" id="p4">
+  <div class="head"><h2>Logo</h2><p>A purple wordmark with an orange-accented X, drawn as custom lettering. Always use the original artwork; never retype the name to make a logo.</p></div>
+  <div class="body g12">
+    <div style="grid-column:1/8;position:relative">
+      <div style="height:440px;background:#fff;border:1px solid var(--line);position:relative;display:flex;align-items:center;justify-content:center">
+        <div class="cs" style="position:relative;font-size:180px;padding:.331em;outline:2px dashed var(--purple-300);outline-offset:0">
+          <img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX" style="height:1em">
+          <i style="position:absolute;left:0;top:50%;width:.331em;height:.331em;transform:translateY(-50%);background:var(--purple-100)"></i>
+          <i style="position:absolute;right:0;top:50%;width:.331em;height:.331em;transform:translateY(-50%);background:var(--purple-100)"></i>
+          <i style="position:absolute;top:0;left:50%;width:.331em;height:.331em;transform:translateX(-50%);background:var(--purple-100)"></i>
+          <i style="position:absolute;bottom:0;left:50%;width:.331em;height:.331em;transform:translateX(-50%);background:var(--purple-100)"></i>
+        </div>
+        <span class="lab" style="position:absolute;left:24px;top:24px">Clear space = ½X on every side</span>
+        <span class="lab" style="position:absolute;right:24px;bottom:24px">X = height of the X</span>
+      </div>
+      <div style="display:flex;gap:40px;margin-top:32px;align-items:flex-start">
+        <div style="width:200px;height:200px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:none"><img src="../brand/mark.svg" alt="X mark" style="height:128px"></div>
+        <div>
+          <p class="h4">Construction</p>
+          <p class="p" style="margin-top:8px">Custom lettering, not a typeface. The “a” carries a diagonal slash that echoes the X, so the word reads as one engineered piece. In the X, the purple stroke (/) runs in front and the orange stroke (\) breaks around it. Shown left: the vector redraw of the X, for icons only.</p>
+        </div>
+      </div>
+    </div>
+    <div style="grid-column:8/13">
+      <p class="h4">Minimum size</p>
+      <table style="width:100%;border-collapse:collapse;margin-top:16px;font:400 17px/1.4 var(--f-body)">
+        <style>#p4 td,#p4 th{border-bottom:1px solid var(--line);padding:14px 0;text-align:left}#p4 th{font:500 13px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--steel)}</style>
+        <tr><th>Version</th><th>Print</th><th>Screen</th></tr>
+        <tr><td>Wordmark</td><td>25 mm wide</td><td>100 px wide</td></tr>
+        <tr><td>Mark alone</td><td>6 mm tall</td><td>16 px tall</td></tr>
+      </table>
+      <div style="display:flex;gap:48px;align-items:flex-end;margin-top:32px">
+        <div><img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX" style="height:26px;"><p class="lab" style="margin-top:12px">100 px</p></div>
+        <div><img src="../brand/mark.svg" alt="X" style="height:16px"><p class="lab" style="margin-top:12px">16 px</p></div>
+      </div>
+      <div style="margin-top:48px;border-left:4px solid var(--orange);padding:4px 0 4px 24px">
+        <p class="h4">Vector artwork needed</p>
+        <p class="p" style="margin-top:8px">The logo in this kit is the original from plantiqx.com, but it is a raster PNG (the site’s SVG only wraps a PNG). PlantiqX to send true vector artwork (AI, EPS or SVG) before anything goes to print. The X symbol for icons is a vector redraw by Busy Fox until then.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span><b>04</b>Logo</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 05 LOGO IN USE -->
+<section class="page" id="p5">
+  <div class="head"><h2>Logo in use</h2><p>The colour logo on light grounds. On night, purple and photos, use the white logo; the orange in the X stays.</p></div>
+  <div class="body">
+    <style>#p5 .tile{height:288px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}#p5 .cap{margin-top:16px}</style>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+      <div><div class="tile" style="background:var(--paper);border:1px solid var(--line)"><img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX" style="height:64px;"></div><p class="lab cap">On paper · colour logo</p></div>
+      <div><div class="tile" style="background:var(--night)"><img class="logo" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX" style="height:64px;"></div><p class="lab cap">On night · white logo</p></div>
+      <div><div class="tile" style="background:var(--purple)"><img class="logo" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX" style="height:64px;"></div><p class="lab cap">On purple · white logo</p></div>
+      <div><div class="tile"><img class="fill" src="../img/13-night-shift.jpg" alt="" style="position:absolute;inset:0;object-position:50% 20%"><img class="logo" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX" style="height:64px;position:relative"></div><p class="lab cap">On photos · white, on a calm dark area</p></div>
+    </div>
+    <div class="rule" style="margin-top:40px;padding-top:32px;display:grid;grid-template-columns:repeat(12,1fr);column-gap:40px">
+      <div style="grid-column:1/4"><p class="h4">Mark alone</p><p class="p" style="margin-top:8px">Where the full logo cannot be read: app icons, favicons and social avatars. Uses the vector redraw of the X; keep ½X clear around it.</p></div>
+      <div style="grid-column:4/13;display:flex;gap:56px;align-items:flex-end">
+        <div><div style="width:160px;height:160px;border-radius:36px;background:var(--night);display:flex;align-items:center;justify-content:center"><img src="../brand/mark-white-orange.svg" alt="" style="height:88px"></div><p class="lab" style="margin-top:16px">App icon</p></div>
+        <div><div style="width:160px;height:160px;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center"><img src="../brand/mark.svg" alt="" style="height:80px"></div><p class="lab" style="margin-top:16px">Avatar · light</p></div>
+        <div><div style="width:160px;height:160px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center"><img src="../brand/mark-white-orange.svg" alt="" style="height:80px"></div><p class="lab" style="margin-top:16px">Avatar · purple</p></div>
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:10px 10px 0 0;padding:12px 24px 12px 16px;width:300px"><img src="../brand/mark.svg" alt="" style="height:16px"><span style="font:400 15px/1 var(--f-body)">PlantiqX</span></div>
+          <div style="display:flex;gap:24px;align-items:flex-end;margin-top:24px"><img src="../brand/mark.svg" alt="" style="height:32px"><img src="../brand/mark.svg" alt="" style="height:16px"></div>
+          <p class="lab" style="margin-top:16px">Favicon · 32 and 16 px</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span><b>05</b>Logo in use</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 06 MISUSE -->
+<section class="page" id="p6">
+  <div class="head"><h2>Logo misuse</h2><p>The logo only works if it looks the same everywhere. Use the supplied files; never rebuild, restyle or redraw them.</p></div>
+  <div class="body"><svg width="0" height="0" style="position:absolute"><filter id="ol"><feMorphology in="SourceAlpha" operator="dilate" radius="2" result="d"/><feComposite in="d" in2="SourceAlpha" operator="out" result="o"/><feFlood flood-color="#5925DC"/><feComposite in2="o" operator="in"/></filter></svg>
+    <style>#p6 .no{height:272px;background:#fff;border:1px solid var(--line);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}#p6 .no svg.x{position:absolute;inset:0;width:100%;height:100%}#p6 .wm{font-size:64px}</style>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px 24px">
+      <div><div class="no"><img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="" style="height:64px;filter:hue-rotate(150deg)"><svg class="x" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="100" y1="0" x2="0" y2="100" stroke="#17161B" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></div><p class="h4" style="margin-top:16px">Don't recolour</p></div>
+      <div><div class="no"><img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="" style="height:64px;transform:scaleX(1.45) scaleY(.8)"><svg class="x" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="100" y1="0" x2="0" y2="100" stroke="#17161B" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></div><p class="h4" style="margin-top:16px">Don't stretch or squash</p></div>
+      <div><div class="no"><img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="" style="height:64px;transform:rotate(-14deg)"><svg class="x" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="100" y1="0" x2="0" y2="100" stroke="#17161B" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></div><p class="h4" style="margin-top:16px">Don't rotate</p></div>
+      <div><div class="no"><img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="" style="height:64px;filter:url(#ol)"><svg class="x" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="100" y1="0" x2="0" y2="100" stroke="#17161B" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></div><p class="h4" style="margin-top:16px">Don't outline</p></div>
+      <div><div class="no"><img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="" style="height:64px;filter:drop-shadow(6px 8px 6px rgba(0,0,0,.35))"><svg class="x" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="100" y1="0" x2="0" y2="100" stroke="#17161B" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></div><p class="h4" style="margin-top:16px">Don't add shadows, glows or effects</p></div>
+      <div><div class="no" style="background:var(--purple-700);border-color:var(--purple-700)"><img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="" style="height:64px;"><svg class="x" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="100" y1="0" x2="0" y2="100" stroke="#FFFFFF" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></div><p class="h4" style="margin-top:16px">Don't place on low-contrast grounds</p></div>
+    </div>
+  </div>
+  <div class="folio"><span><b>06</b>Logo misuse</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 07 COLOUR -->
+<section class="page" id="p7">
+  <div class="head"><h2>Colour</h2><p>Purple leads. Orange is the accent: the X, a highlight, the call to action. Use it small. Ink and paper carry everything else.</p></div>
+  <div class="body">
+    <style>#p7 .sw .chip{height:184px}#p7 .sw .n{font:600 24px/1.2 var(--f-head);margin-top:16px}#p7 .sw .r{font:400 15px/1.4 var(--f-body);color:var(--steel);margin-top:4px}#p7 .sw .v{font:400 14px/1.6 var(--f-mono);margin-top:12px;color:var(--ink)}</style>
+    <div style="display:grid;grid-template-columns:560px repeat(4,1fr);gap:16px">
+      <div class="sw"><div class="chip" style="background:var(--purple)"></div><p class="n">Purple</p><p class="r">Primary. Wordmark, headings, brand grounds.</p><p class="v">#5925DC<br>RGB 89 37 220<br>CMYK 60 83 0 14</p></div>
+      <div class="sw"><div class="chip" style="background:var(--orange)"></div><p class="n">Orange</p><p class="r">Accent. The X, highlights, CTAs.</p><p class="v">#FF8700<br>RGB 255 135 0<br>CMYK 0 47 100 0</p></div>
+      <div class="sw"><div class="chip" style="background:var(--ink)"></div><p class="n">Ink</p><p class="r">Text.</p><p class="v">#17161B<br>RGB 23 22 27<br>CMYK 15 19 0 89</p></div>
+      <div class="sw"><div class="chip" style="background:var(--paper);border:1px solid var(--line)"></div><p class="n">Paper</p><p class="r">Page grounds.</p><p class="v">#F7F6F2<br>RGB 247 246 242<br>CMYK 0 0 2 3</p></div>
+      <div class="sw"><div class="chip" style="background:var(--night)"></div><p class="n">Night</p><p class="r">Dark covers.</p><p class="v">#121016<br>RGB 18 16 22<br>CMYK 18 27 0 91</p></div>
+    </div>
+    <div style="margin-top:40px">
+      <div style="display:flex;height:48px"><div style="flex:60;background:var(--paper);border:1px solid var(--line)"></div><div style="flex:20;background:var(--ink)"></div><div style="flex:15;background:var(--purple)"></div><div style="flex:5;background:var(--orange)"></div></div>
+      <div style="display:flex;margin-top:12px" class="lab"><span style="flex:60">Paper 60</span><span style="flex:20">Ink 20</span><span style="flex:15">Purple 15</span><span style="flex:5;white-space:nowrap">Orange 5</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:16px;margin-top:40px">
+      <style>#p7 .t div{height:56px}#p7 .t p{font:400 13px/1.5 var(--f-mono);margin-top:8px}</style>
+      <div class="t"><div style="background:var(--purple-700)"></div><p>Purple 700<br>#4419B0</p></div>
+      <div class="t"><div style="background:var(--purple-300)"></div><p>Purple 300<br>#9C7BF0</p></div>
+      <div class="t"><div style="background:var(--purple-100)"></div><p>Purple 100<br>#ECE6FC</p></div>
+      <div class="t"><div style="background:var(--orange-700)"></div><p>Orange 700<br>#D66F00</p></div>
+      <div class="t"><div style="background:var(--orange-100)"></div><p>Orange 100<br>#FFF0DD</p></div>
+      <div class="t"><div style="background:var(--steel)"></div><p>Steel<br>#6B6875</p></div>
+      <div class="t"><div style="background:var(--line)"></div><p>Line<br>#E4E1DA</p></div>
+    </div>
+    <p class="sm" style="margin-top:16px">Tints are for charts, tables and interface states only. CMYK values are converted from RGB; confirm against a press proof before print.</p>
+  </div>
+  <div class="folio"><span><b>07</b>Colour</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 08 ACCESSIBLE PAIRS -->
+<section class="page" id="p8">
+  <div class="head"><h2>Accessible colour pairs</h2><p>Contrast ratios worked out to WCAG 2.2. Body text needs 4.5:1. Large text (24 px and up, or 19 px bold) needs 3:1.</p></div>
+  <div class="body">
+    <style>#p8 .pr .s{height:168px;display:flex;align-items:flex-end;padding:24px;font:600 40px/1 var(--f-head);letter-spacing:-.02em}#p8 .pr .s small{font:400 17px/1 var(--f-body);margin-left:16px;letter-spacing:0}#p8 .pr .k{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px}#p8 .pr .ratio{font:600 36px/1 var(--f-head);letter-spacing:-.02em}#p8 .v{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 8px;border:1px solid var(--ink)}#p8 .v.f{background:var(--ink);color:#fff}#p8 .pn{font:400 15px/1.45 var(--f-body);color:var(--text-secondary);margin-top:8px}</style>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px 24px">
+      <div class="pr"><div class="s" style="background:var(--purple);color:#fff">Aa<small>White on Purple</small></div><div class="k"><span class="ratio">7.71:1</span><span class="v">AAA</span></div><p class="pn">Any size. Purple buttons and grounds.</p></div>
+      <div class="pr"><div class="s" style="background:var(--paper);color:var(--purple);border:1px solid var(--line)">Aa<small>Purple on Paper</small></div><div class="k"><span class="ratio">7.13:1</span><span class="v">AAA</span></div><p class="pn">Any size. Headings and links.</p></div>
+      <div class="pr"><div class="s" style="background:var(--paper);color:var(--ink);border:1px solid var(--line)">Aa<small>Ink on Paper</small></div><div class="k"><span class="ratio">16.64:1</span><span class="v">AAA</span></div><p class="pn">Body text, everywhere.</p></div>
+      <div class="pr"><div class="s" style="background:var(--orange);color:var(--ink)">Aa<small>Ink on Orange</small></div><div class="k"><span class="ratio">7.47:1</span><span class="v">AAA</span></div><p class="pn">Orange buttons always take Ink text.</p></div>
+      <div class="pr"><div class="s" style="background:var(--orange);color:#fff">Aa<small>White on Orange</small></div><div class="k"><span class="ratio">2.41:1</span><span class="v f">Fails</span></div><p class="pn">Fails even for large text. Never set white on orange.</p></div>
+      <div class="pr"><div class="s" style="background:var(--paper);color:var(--orange);border:1px solid var(--line)">Aa<small style="color:var(--ink)">Orange on Paper</small></div><div class="k"><span class="ratio">2.23:1</span><span class="v f">Fails</span></div><p class="pn">Not for text on light grounds. The X, rules and shapes only.</p></div>
+      <div class="pr"><div class="s" style="background:var(--night);color:var(--orange)">Aa<small style="color:#fff">Orange on Night</small></div><div class="k"><span class="ratio">7.84:1</span><span class="v">AAA</span></div><p class="pn">Orange text and CTAs work on dark covers.</p></div>
+      <div class="pr"><div class="s" style="background:var(--night);color:var(--purple)">Aa<small style="color:#fff">Purple on Night</small></div><div class="k"><span class="ratio">2.45:1</span><span class="v f">Fails</span></div><p class="pn">Use White (18.89:1) or Purple 300 (5.85:1) on night.</p></div>
+    </div>
+    <p class="sm" style="margin-top:32px">Also checked: Steel on Paper 5.03:1 (AA, captions) · White on Orange 700 3.42:1 (large text only) · Orange on Purple 3.20:1 (graphics only, never text).</p>
+  </div>
+  <div class="folio"><span><b>08</b>Accessible colour pairs</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 09 TYPOGRAPHY -->
+<section class="page" id="p9">
+  <div class="head"><h2>Typography</h2><p>Space Grotesk for headings, IBM Plex Sans for body text, IBM Plex Mono for readings, data and labels. All three are free under the SIL Open Font Licence.</p></div>
+  <div class="body g12">
+    <div style="grid-column:1/6">
+      <style>#p9 .spec{display:flex;gap:32px;align-items:center;height:200px;border-bottom:1px solid var(--line)}#p9 .spec .aa{font-size:128px;line-height:1;width:200px;flex:none;letter-spacing:-.03em}</style>
+      <div class="spec" style="border-top:1px solid var(--line)"><span class="aa" style="font-family:var(--f-head);font-weight:700;color:var(--purple)">Aa</span><div><p class="h3">Space Grotesk</p><p class="sm" style="margin-top:8px">Headings. Bold 700, SemiBold 600, Medium 500.</p></div></div>
+      <div class="spec"><span class="aa" style="font-family:var(--f-body);font-weight:400">Aa</span><div><p class="h3">IBM Plex Sans</p><p class="sm" style="margin-top:8px">Body text. Regular 400, Medium 500, SemiBold 600.</p></div></div>
+      <div class="spec"><span class="aa" style="font-family:var(--f-mono);font-weight:400;font-size:112px">Aa</span><div><p class="h3">IBM Plex Mono</p><p class="sm" style="margin-top:8px">Readings, data, labels. Regular 400, Medium 500.</p></div></div>
+    </div>
+    <div style="grid-column:7/13">
+      <table style="width:100%;border-collapse:collapse">
+        <style>#p9 td,#p9 th{border-bottom:1px solid var(--line);padding:0;height:40px;text-align:left;font:400 15px/1 var(--f-mono)}#p9 th{font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel)}#p9 td:first-child{font:500 17px/1 var(--f-body)}</style>
+        <tr><th>Style</th><th>Font · weight</th><th>Size / line</th><th>Tracking</th></tr>
+        <tr><td>Display</td><td>Grotesk 700</td><td>96 / 100</td><td>−3%</td></tr>
+        <tr><td>Heading 1</td><td>Grotesk 700</td><td>64 / 68</td><td>−2.5%</td></tr>
+        <tr><td>Heading 2</td><td>Grotesk 600</td><td>44 / 50</td><td>−2%</td></tr>
+        <tr><td>Heading 3</td><td>Grotesk 600</td><td>28 / 34</td><td>−1%</td></tr>
+        <tr><td>Body large</td><td>Plex Sans 400</td><td>22 / 33</td><td>0</td></tr>
+        <tr><td>Body</td><td>Plex Sans 400</td><td>18 / 28</td><td>0</td></tr>
+        <tr><td>Small</td><td>Plex Sans 400</td><td>15 / 22</td><td>0</td></tr>
+        <tr><td>Label</td><td>Plex Mono 500 caps</td><td>13 / 18</td><td>+8%</td></tr>
+      </table>
+      <p class="sm" style="margin-top:12px">Screen sizes in px. For A4 print, body is 10 pt and headings scale in the same steps.</p>
+      <div style="margin-top:32px;background:#fff;border:1px solid var(--line);padding:32px 40px">
+        <span class="badge b-pil"><i></i>PlantiqX Energy · Piloting</span>
+        <p style="font:600 40px/1.15 var(--f-head);letter-spacing:-.02em;margin-top:24px">See which DG set burned the extra diesel last night.</p>
+        <p class="p" style="margin-top:16px">Energy Monitoring reads the panel and DG set meters across the plant, and shows the shift where consumption ran above plan.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span><b>09</b>Typography</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 10 VOICE -->
+<section class="page" id="p10">
+  <div class="head"><h2>Voice and tone</h2><p>PlantiqX sounds like an engineering company: precise, plain-spoken and practical. Write the way a good plant head talks on the floor.</p></div>
+  <div class="body">
+    <div class="g12">
+      <div style="grid-column:1/5"><p class="lab">01</p><p class="h3" style="margin-top:12px">Name the machine, not the magic</p><p class="p" style="margin-top:12px">Say which furnace, which gate, which meter. Specific beats impressive.</p></div>
+      <div style="grid-column:5/9"><p class="lab">02</p><p class="h3" style="margin-top:12px">Use case first, technology second</p><p class="p" style="margin-top:12px">Start with the problem the plant has. Bring in IoT or AI only to explain how it is solved.</p></div>
+      <div style="grid-column:9/13"><p class="lab">03</p><p class="h3" style="margin-top:12px">Plain words, plant units</p><p class="p" style="margin-top:12px">Short sentences. The units and terms the plant already uses: °C, kWh, shifts, gate passes, downtime.</p></div>
+    </div>
+    <table style="width:100%;border-collapse:collapse;margin-top:48px;table-layout:fixed">
+      <style>#p10 td,#p10 th{border-bottom:1px solid var(--line);height:64px;text-align:left;vertical-align:middle;padding-right:40px}#p10 th{height:40px;font:500 13px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase}#p10 td.y{font:500 22px/1.3 var(--f-head);letter-spacing:-.01em;color:var(--ink)}#p10 td.n{font:400 19px/1.35 var(--f-body);color:var(--steel)}</style>
+      <tr><th style="color:var(--purple)">Say this</th><th style="color:var(--steel)">Not this</th></tr>
+      <tr><td class="y">Know when the furnace crosses its set point.</td><td class="n">Unlock AI-powered operational excellence.</td></tr>
+      <tr><td class="y">Every visitor, vehicle and gate pass, logged at the gate.</td><td class="n">Seamless, next-generation visitor experiences.</td></tr>
+      <tr><td class="y">Fit sensors to the motors you already run.</td><td class="n">Revolutionise your legacy infrastructure.</td></tr>
+      <tr><td class="y">See which DG set burned the extra diesel last night.</td><td class="n">Leverage real-time insights to drive sustainability.</td></tr>
+      <tr><td class="y">Book a plant visit.</td><td class="n">Begin your digital transformation journey today!</td></tr>
+    </table>
+    <p class="sm" style="margin-top:24px">Avoid: seamless, leverage, cutting-edge, next-gen, revolutionise, unlock, synergy, exclamation marks. Use: plant head, shift, set point, gate pass, LT panel, downtime, breakdown.</p>
+  </div>
+  <div class="folio"><span><b>10</b>Voice and tone</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 11 PHOTOGRAPHY -->
+<section class="page" id="p11">
+  <div class="head"><h2>Photography</h2><p>Big industry, shot like cinema. Large working plants, real people in proper PPE, heavy machines and true site light, with scale and depth in every frame.</p></div>
+  <div class="body g12">
+    <div style="grid-column:1/9;display:grid;grid-template-columns:repeat(3,1fr);gap:24px 16px;align-content:start">
+      <style>#p11 figure .im{height:256px;overflow:hidden}#p11 figure img{width:100%;height:100%;object-fit:cover}#p11 figcaption{margin-top:12px}</style>
+      <figure><div class="im"><img src="../img/00-hero-floor.jpg" alt=""></div><figcaption class="lab">Shop floor at scale</figcaption></figure>
+      <figure><div class="im"><img src="../img/01-retrofit-gateway.jpg" alt=""></div><figcaption class="lab">Retrofit on a working pump</figcaption></figure>
+      <figure><div class="im"><img src="../img/12-v-furnace.jpg" alt="" style="object-position:50% 40%"></div><figcaption class="lab">Furnace, proper heat PPE</figcaption></figure>
+      <figure><div class="im"><img src="../img/03-panel-room.jpg" alt=""></div><figcaption class="lab">LT panel room</figcaption></figure>
+      <figure><div class="im"><img src="../img/14-v-engineer.jpg" alt="" style="object-position:50% 30%"></div><figcaption class="lab">Engineer at the machine</figcaption></figure>
+      <figure><div class="im"><img src="../img/05-loading-bay.jpg" alt=""></div><figcaption class="lab">Loading bay, golden hour</figcaption></figure>
+    </div>
+    <div style="grid-column:9/13">
+      <style>#p11 ul{list-style:none;margin-top:16px}#p11 li{font:400 17px/1.45 var(--f-body);color:var(--text-secondary);padding:10px 0;border-top:1px solid var(--line)}</style>
+      <p class="h4">Do</p>
+      <ul>
+        <li>Large plants and heavy machines: furnaces, process halls, panel rooms, gates, yards.</li>
+        <li>Cinematic framing: wide establishing shots, low angles, depth and scale.</li>
+        <li>People in the right PPE for the area: helmet, safety shoes, hi-vis, coverall.</li>
+        <li>True site light and colour. Brownfield machines as well as new.</li>
+      </ul>
+      <p class="h4" style="margin-top:24px">Don't</p>
+      <ul>
+        <li>Glowing circuits, holograms, sci-fi robots or floating dashboards.</li>
+        <li>Stock handshakes, posed office teams, people without PPE on the floor.</li>
+        <li>Purple or orange colour washes and heavy filters.</li>
+      </ul>
+      <p class="sm" style="margin-top:16px;color:var(--steel)">Direction images made by Busy Fox for this kit. Replace with photos shot at PlantiqX customer sites as they come in.</p>
+    </div>
+  </div>
+  <div class="folio"><span><b>11</b>Photography</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 12 GRAPHIC DEVICE + STATUS -->
+<section class="page" id="p12">
+  <div class="head"><h2>Graphic device and status</h2><p>One diagonal stroke, taken from the X at 54°, crops photos and divides layouts. Status badges say what is running today.</p></div>
+  <div class="body g12">
+    <div style="grid-column:1/8">
+      <div style="height:416px;background:#fff;border:1px solid var(--line);position:relative;overflow:hidden">
+        <div style="position:absolute;right:0;top:0;width:620px;height:100%;clip-path:polygon(299px 0,100% 0,100% 100%,0 100%)"><img class="fill" src="../img/05-loading-bay.jpg" alt=""></div>
+        <div style="position:absolute;left:628px;top:0;width:24px;height:416px;background:var(--purple);transform-origin:50% 0;transform:skewX(-35.7deg)"></div>
+        <div style="position:absolute;left:40px;top:40px;width:300px">
+          <span class="badge b-dep"><i></i>Deployed</span>
+          <p style="font:600 36px/1.15 var(--f-head);letter-spacing:-.02em;margin-top:24px">Every truck in and out, on one screen.</p>
+        </div>
+        <img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX" style="position:absolute;left:40px;bottom:32px;height:28px;">
+      </div>
+      <div class="g12" style="margin-top:32px;column-gap:24px">
+        <p class="sm" style="grid-column:1/5"><b style="color:var(--ink);font-weight:600">One stroke per layout.</b> As a photo crop, a divider or a corner cut. Never as a pattern.</p>
+        <p class="sm" style="grid-column:5/9"><b style="color:var(--ink);font-weight:600">Always 54°, rising left to right,</b> the same angle as the purple stroke in the mark.</p>
+        <p class="sm" style="grid-column:9/13"><b style="color:var(--ink);font-weight:600">Purple stroke.</b> Orange only as a short counter-stroke, the way it sits behind the X.</p>
+      </div>
+    </div>
+    <div style="grid-column:8/13">
+      <p class="h4">Status badges</p>
+      <style>#p12 .st{display:grid;grid-template-columns:168px 1fr;gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}</style>
+      <div style="margin-top:16px;border-top:1px solid var(--line)">
+        <div class="st"><span><span class="badge b-live"><i></i>Live</span></span><p class="sm">Running at customer plants today.</p></div>
+        <div class="st"><span><span class="badge b-dep"><i></i>Deployed</span></span><p class="sm">Installed and in use at one or more sites.</p></div>
+        <div class="st"><span><span class="badge b-pil"><i></i>Piloting</span></span><p class="sm">In UAT or pilot at a customer site.</p></div>
+        <div class="st"><span><span class="badge b-road"><i></i>Roadmap</span></span><p class="sm">Planned. Do not sell as available.</p></div>
+      </div>
+      <p class="sm" style="margin-top:24px">Plex Mono Medium 13 px, caps, +8% tracking. An 8 px square in the status colour; the text stays Ink so it passes contrast on any ground.</p>
+      <div style="background:var(--night);padding:24px;margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+        <span class="badge dk b-live"><i></i>Live</span><span class="badge dk b-dep"><i style="background:var(--purple-300)"></i>Deployed</span><span class="badge dk b-pil"><i style="background:var(--orange)"></i>Piloting</span><span class="badge dk b-road"><i style="border-color:#8F8B99"></i>Roadmap</span>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span><b>12</b>Graphic device and status</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 13 MODULE NAMING -->
+<section class="page" id="p13">
+  <div class="head"><h2>Module naming <span style="display:inline-block;vertical-align:middle;font:500 14px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;background:var(--orange-100);color:var(--ink);padding:10px 14px;margin-left:16px;position:relative;top:-6px">Proposal</span></h2><p>One pattern: PlantiqX plus a plain word the plant already uses. Today's names stay in brackets while customers learn the new ones. For PlantiqX to approve.</p></div>
+  <div class="body">
+    <table style="width:100%;border-collapse:collapse;table-layout:fixed">
+      <style>#p13 td,#p13 th{border-bottom:1px solid var(--line);height:58px;text-align:left;vertical-align:middle;padding-right:32px}#p13 th{height:40px;font:500 13px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--steel)}#p13 td{font:400 17px/1.35 var(--f-body);color:var(--text-secondary)}#p13 td.nm{font:600 22px/1.2 var(--f-head);letter-spacing:-.01em;color:var(--purple)}</style>
+      <colgroup><col style="width:25%"><col style="width:24%"><col style="width:14%"><col style="width:37%"></colgroup>
+      <tr><th>Module today</th><th>Proposed name</th><th>Status</th><th>First mention, written out</th></tr>
+      <tr><td>Asset Management + IoT Monitoring</td><td class="nm">PlantiqX Assets</td><td><span class="badge b-live"><i></i>Live</span></td><td>PlantiqX Assets tracks every machine and reads its sensors live.</td></tr>
+      <tr><td>Visitor &amp; Vehicle Management</td><td class="nm">PlantiqX Gate (VEMS)</td><td><span class="badge b-dep"><i></i>Deployed</span></td><td>PlantiqX Gate (VEMS) logs every visitor, vehicle and gate pass.</td></tr>
+      <tr><td>FreightBid</td><td class="nm">FreightBid by PlantiqX</td><td><span class="badge b-dep"><i></i>Deployed</span></td><td>Keeps its own name and site: freightbid.plantiqx.com</td></tr>
+      <tr><td>Factory Surveillance</td><td class="nm">PlantiqX Vision</td><td><span class="badge b-pil"><i></i>Piloting</span></td><td>PlantiqX Vision watches yards, gates and lines on camera.</td></tr>
+      <tr><td>Energy Monitoring</td><td class="nm">PlantiqX Energy</td><td><span class="badge b-pil"><i></i>Piloting</span></td><td>PlantiqX Energy reads panel and DG set meters across the plant.</td></tr>
+      <tr><td>Material Management</td><td class="nm">PlantiqX Stores</td><td><span class="badge b-road"><i></i>Roadmap</span></td><td>PlantiqX Stores: material received, issued and on hand.</td></tr>
+      <tr><td>Custom IoT &amp; Embedded</td><td class="nm">PlantiqX Custom</td><td class="lab">Service</td><td>Sensors and controllers built for one plant's problem.</td></tr>
+      <tr><td>AttendEase · ProcureIQ</td><td class="nm">… by PlantiqX</td><td class="lab">To confirm</td><td>Keep their names, endorsed: AttendEase by PlantiqX.</td></tr>
+    </table>
+    <div class="g12" style="margin-top:32px">
+      <p class="sm" style="grid-column:1/5"><b style="color:var(--ink);font-weight:600">Never shorten PlantiqX.</b> No “PQX”, no “Plantiq”, no “Plantiqx”.</p>
+      <p class="sm" style="grid-column:5/9"><b style="color:var(--ink);font-weight:600">No “AI” or “Smart” in a name.</b> Say what the module does instead.</p>
+      <p class="sm" style="grid-column:9/13"><b style="color:var(--ink);font-weight:600">Show the status badge</b> next to the name wherever modules are listed.</p>
+    </div>
+  </div>
+  <div class="folio"><span><b>13</b>Module naming (proposal)</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 14 APPLICATIONS -->
+<section class="page" id="p14">
+  <div class="head" style="height:120px"><h2>Applications</h2><p>Flat layouts at true proportions. Templates follow once PlantiqX approves this kit.</p></div>
+  <div style="position:absolute;left:var(--mx);right:var(--mx);top:256px;bottom:96px;display:grid;grid-template-columns:448px 1fr;column-gap:40px">
+    <div>
+      <div style="width:448px;height:448px;background:var(--paper);border:1px solid var(--line);position:relative;overflow:hidden;background:#fff">
+        <div style="height:288px;overflow:hidden"><img class="fill" src="../img/12-v-furnace.jpg" alt="" style="object-position:50% 35%"></div>
+        <div style="padding:24px 28px">
+          <p style="font:600 26px/1.15 var(--f-head);letter-spacing:-.02em">Know when the furnace crosses its set point.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px"><img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX" style="height:22px;"><span class="lab" style="color:var(--ink)">plantiqx.com</span></div>
+        </div>
+      </div>
+      <p class="lab" style="margin-top:12px">LinkedIn post · 1080 × 1080</p>
+      <div style="margin-top:24px;background:#fff;border:1px solid var(--line);padding:20px 24px;width:448px">
+        <p style="font:600 17px/1.3 var(--f-body)">Srikanth Kudaravalli</p>
+        <p style="font:400 14px/1.4 var(--f-body);color:var(--steel)">Co-Founder, PlantiqX</p>
+        <div style="display:flex;align-items:center;gap:20px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)"><img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX" style="height:20px;"><span style="font:400 12px/1.5 var(--f-mono);color:var(--ink)">+91 6302288170 · www.plantiqx.com</span></div>
+      </div>
+      <p class="lab" style="margin-top:12px">Email signature</p>
+    </div>
+    <div>
+      <div style="width:1192px;height:298px;background:var(--night);position:relative;overflow:hidden">
+        <div style="position:absolute;right:0;top:0;width:600px;height:100%;clip-path:polygon(214px 0,100% 0,100% 100%,0 100%)"><img class="fill" src="../img/00-hero-floor.jpg" alt=""></div>
+        <div style="position:absolute;left:320px;top:72px">
+          <p style="font:600 40px/1.1 var(--f-head);letter-spacing:-.02em;color:#fff">Where Minds and<br>Machines Merge</p>
+          <p class="lab" style="color:var(--orange);margin-top:20px">plantiqx.com</p>
+        </div>
+      </div>
+      <p class="lab" style="margin-top:12px">LinkedIn banner · 1584 × 396 · keep the left quarter clear for the page logo</p>
+      <div style="display:flex;gap:40px;margin-top:32px">
+        <div>
+          <div style="width:500px;height:324px;background:#fff;border:1px solid var(--line);padding:32px 40px;display:flex;flex-direction:column;justify-content:space-between">
+            <img class="logo" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX" style="height:40px;align-self:flex-start">
+            <div>
+              <p style="font:600 21px/1.2 var(--f-head);letter-spacing:-.01em">Krishna Kanth Kudaravalli</p>
+              <p style="font:400 15px/1.4 var(--f-body);color:var(--steel)">Founder</p>
+              <p style="font:400 13px/1.6 var(--f-mono);margin-top:16px">+91 6302288170<br>info@plantiqx.com · www.plantiqx.com<br>Hyderabad, India</p>
+            </div>
+          </div>
+          <p class="lab" style="margin-top:12px">Business card front · 85 × 55 mm</p>
+        </div>
+        <div>
+          <div style="width:500px;height:324px;background:var(--purple);position:relative;overflow:hidden;padding:36px 40px">
+            <img src="../brand/mark-white-orange.svg" alt="" style="position:absolute;right:48px;top:48px;height:160px">
+            <p style="position:absolute;left:40px;bottom:36px;font:500 20px/1.2 var(--f-head);color:#fff">Where Minds and Machines Merge</p>
+          </div>
+          <p class="lab" style="margin-top:12px">Business card back</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span><b>14</b>Applications</span><span>PlantiqX Brand Kit · v1 · November 2026</span></div>
+</section>
+
+<!-- 15 CONTACT + NEXT -->
+<section class="page" id="p15">
+  <div class="night" style="position:absolute;left:0;top:0;bottom:0;width:880px;padding:88px 80px 96px 120px;display:flex;flex-direction:column;justify-content:space-between">
+    <div>
+      <img class="logo" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX" style="height:96px;">
+      <p style="font:500 28px/1.2 var(--f-head);color:#D9D6E0;margin-top:24px">Where Minds and Machines Merge</p>
+    </div>
+    <div style="font:400 20px/1.9 var(--f-body);color:#fff">
+      <p class="lab" style="color:#8F8B99;margin-bottom:16px">Contact</p>
+      www.plantiqx.com<br>info@plantiqx.com<br>+91 6302288170<br>linkedin.com/company/plantiqx<br>Instagram @plantiqx.ai<br>Hyderabad, India
+    </div>
+  </div>
+  <div style="position:absolute;left:1000px;right:var(--mx);top:var(--top)">
+    <h2 style="font:700 56px/1.08 var(--f-head);letter-spacing:-.03em">Next: files we need from PlantiqX</h2>
+    <ol style="list-style:none;margin-top:40px">
+      <style>#p15 li{display:grid;grid-template-columns:48px 1fr;padding:18px 0;border-top:1px solid var(--line)}#p15 li span{font:500 14px/1.6 var(--f-mono);color:var(--steel)}#p15 li p{font:400 19px/1.45 var(--f-body);color:var(--ink)}#p15 li small{display:block;font-size:15px;color:var(--steel);margin-top:4px}</style>
+      <li><span>01</span><p>Vector logo artwork<small>AI, EPS or SVG of the logo and the X. The site files are raster PNGs only.</small></p></li>
+      <li><span>02</span><p>Existing templates<small>Letterhead, proposal, PPT deck, email signature, social posts.</small></p></li>
+      <li><span>03</span><p>Site photography<small>Customer plants, with permission to publish.</small></p></li>
+      <li><span>04</span><p>Product screenshots<small>Real screens from each module.</small></p></li>
+      <li><span>05</span><p>Decisions on page 13<small>Module names and current status of each module.</small></p></li>
+    </ol>
+  </div>
+  <p class="lab" style="position:absolute;left:1000px;bottom:40px">Prepared by Busy Fox · Brand Kit v1 · November 2026</p>
+</section>
+
+<script>
+(function(){
+  var m=location.search.match(/p=(\d+)/);
+  if(m){document.documentElement.classList.add('one');var el=document.getElementById('p'+m[1]);if(el)el.classList.add('on');return;}
+  function fit(){var w=document.documentElement.clientWidth||innerWidth||1920;if(w<=32)return;document.documentElement.style.setProperty('--z',Math.max(.1,Math.min(1,(w-32)/1920)));}
+  fit();addEventListener('resize',fit);addEventListener('load',fit);
+})();
+</script>
+</body>
+</html>

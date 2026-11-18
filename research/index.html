@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlantiqX: Market &amp; Competitor Scan · Prepared by Busy Fox · Nov 2026</title>
+<link rel="stylesheet" href="../brand/tokens.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55}
+a{color:var(--purple-700);text-decoration:underline;text-decoration-color:var(--purple-300);text-underline-offset:2px}
+a:hover{text-decoration-color:var(--purple)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header.top{border-top:6px solid var(--purple);position:relative}
+header.top::after{content:"";position:absolute;top:-6px;right:0;width:18%;height:6px;background:var(--orange)}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0 0}
+.pqx-logo{display:inline-flex;align-items:center;font-family:var(--f-head);font-weight:700;color:var(--purple);letter-spacing:-0.035em;line-height:1;font-size:26px}
+.pqx-logo img{height:.76em;margin-left:.07em;transform:translateY(-.015em)}
+.by{font-family:var(--f-mono);font-size:12px;color:var(--steel);letter-spacing:.04em;text-transform:uppercase;text-align:right}
+h1,h2,h3{font-family:var(--f-head);color:var(--purple);letter-spacing:-0.02em;line-height:1.15}
+h1{font-size:clamp(30px,5vw,48px);margin:40px 0 10px;color:var(--ink)}
+h1 span{color:var(--purple)}
+.lede{font-size:18px;max-width:760px;color:var(--ink);margin:0 0 8px}
+.meta{font-size:14px;color:var(--steel);max-width:760px;margin:0 0 36px}
+h2{font-size:clamp(22px,3vw,30px);margin:56px 0 14px;padding-top:18px;border-top:1px solid var(--line)}
+h2 .n{font-family:var(--f-mono);font-size:14px;color:var(--orange-700);font-weight:500;margin-right:10px;letter-spacing:0}
+h3{font-size:19px;margin:30px 0 10px}
+p{margin:0 0 12px;max-width:780px}
+.note{font-size:14px;color:var(--steel)}
+.tw{width:100%;overflow-x:auto;margin:0 0 8px;border:1px solid var(--line);background:#fff}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:640px}
+th,td{text-align:left;vertical-align:top;padding:11px 13px;border-bottom:1px solid var(--line)}
+th{font-family:var(--f-head);font-weight:600;color:var(--purple);background:var(--purple-100);font-size:13.5px;letter-spacing:.01em}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;min-width:140px}
+td.src{font-size:13px;min-width:170px}
+.claim{font-family:var(--f-mono);font-size:11px;color:var(--steel);text-transform:uppercase;letter-spacing:.05em}
+.takes{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:8px 0 0}
+.takes section{background:#fff;border:1px solid var(--line);border-top:3px solid var(--purple);padding:20px 22px 10px}
+.takes section.soc{border-top-color:var(--orange)}
+.takes h3{margin:0 0 12px;color:var(--ink)}
+ol.t{margin:0;padding-left:20px}
+ol.t li{margin:0 0 12px;font-size:15px}
+ol.t li .s{display:block;font-size:12.5px;color:var(--steel);margin-top:2px}
+.own{background:var(--night);color:#fff;padding:26px 26px 22px;margin:18px 0 18px;max-width:880px}
+.own .k{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--orange)}
+.own p{font-family:var(--f-head);font-size:clamp(19px,2.4vw,24px);line-height:1.3;margin:8px 0 0;letter-spacing:-0.01em;max-width:none}
+.map{background:#fff;border:1px solid var(--line);padding:14px;margin:12px 0 6px;max-width:880px}
+.map{overflow-x:auto}
+.map svg{width:100%;min-width:620px;height:auto;display:block}
+.facts{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
+.facts li{padding:18px 18px 16px 0;border-bottom:1px solid var(--line)}
+.facts li:nth-child(odd){padding-right:28px}
+.facts .big{font-family:var(--f-head);font-weight:700;font-size:30px;color:var(--purple);letter-spacing:-0.02em;line-height:1;display:block;margin-bottom:6px}
+.facts .s{font-size:12.5px;color:var(--steel);display:block;margin-top:4px}
+.tags{font-family:var(--f-mono);font-size:13.5px;line-height:2;color:var(--purple-700)}
+footer{margin:64px 0 0;padding:22px 0 40px;border-top:1px solid var(--line);font-size:13px;color:var(--steel)}
+@media (max-width:760px){
+  .takes{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .facts li:nth-child(odd){padding-right:0}
+  .mast{align-items:flex-start}
+  .by{font-size:11px}
+}
+@media print{body{background:#fff}.tw{overflow:visible}table{min-width:0}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap mast">
+    <div class="pqx-logo">Plantiq<img src="../brand/mark.svg" alt="X"></div>
+    <div class="by">Prepared by Busy Fox<br>18 Nov 2026</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>PlantiqX: Market &amp; Competitor Scan <span>· Prepared by Busy Fox · Nov 2026</span></h1>
+  <p class="lede">Who PlantiqX competes with in each module, the gap it can own, the market numbers worth quoting, and what competitors do on social. India focus, mid-size manufacturers.</p>
+  <p class="meta">Web scan on 18 Nov 2026. Every row has a source. Most competitor facts are the competitor's own claims and are marked <span class="claim">vendor claim</span>. "Not observed" means not found in this scan, not that it does not exist.</p>
+
+  <div class="takes">
+    <section>
+      <h3>Five takeaways for the pitch deck</h3>
+      <ol class="t">
+        <li>The pain is already measured: 62% of equipment-heavy firms keep machine data across several systems, and about 59% lack structured maintenance histories.<span class="s">MIT SMR India x Infinite Uptime, Mar 2026</span></li>
+        <li>The gap is adoption, not awareness: 67% of MSMEs are digitally equipped but only 23% use AI, IoT or analytics; 84% say the value is unclear. Lead with payback, not technology.<span class="s">CMR, Jun 2025</span></li>
+        <li>Every competitor we verified sells one module, and the PdM and vision leaders chase steel, cement and fertiliser majors. Mid-size, multi-module is open ground.<span class="s">Infinite Uptime, Ripik.ai, Veris, SuperProcure sources below</span></li>
+        <li>Big money validates each category: Infinite Uptime $35M (2025), Tata Motors Rs 270 cr+ into Freight Tiger (2023 to 2025), Schneider bought Zenatix (2023), Siemens bought Senseye (2022).<span class="s">TechCrunch, Autocar Pro, MergerLinks, Siemens</span></li>
+        <li>Home turf is big: Telangana has 2.6M+ MSME units, and Hyderabad's BDMA has 350+ pharma/API members, about 75% MSMEs. A pharma and chemicals beachhead fits SETL's world.<span class="s">Telangana Today, Sep 2026 · BioSpectrum</span></li>
+      </ol>
+    </section>
+    <section class="soc">
+      <h3>Five takeaways for the social media plan</h3>
+      <ol class="t">
+        <li>Own a number. Competitors earn authority with data (Infinite Uptime's MIT SMR study, SuperProcure's Indian Freight Index). PlantiqX: a quarterly "mid-size plant pulse" and a FreightBid lane-rate snapshot.<span class="s">infinite-uptime.com news · superprocure.com, Jul 2026</span></li>
+        <li>Gated webinars are this category's lead magnet. Nanoprecise runs a whole on-demand library behind sign-up forms. Start with the OPEX Chemicals talk.<span class="s">nanoprecise.io webinars</span></li>
+        <li>Show the detection, not "AI". Wobot lists exact catches (no hard hat, person in forklift zone, unattended machine). One plant-floor use case per post.<span class="s">wobot.ai, 2022</span></li>
+        <li>Compliance is a proven hook: Factories Act guides for gates, GMP for pharma CCTV. PlantiqX adds DPDP Act 2023, which VEMS already covers.<span class="s">Happy Visitor 2026 · Mikshi · PlantiqX profile</span></li>
+        <li>LinkedIn is the channel: 160M+ Indian members, up 50%+ in two years, and Indian video uploads up 60%. Founder-led posts plus short plant-floor video.<span class="s">Storyboard18, Sep 2025</span></li>
+      </ol>
+    </section>
+  </div>
+
+  <h2><span class="n">01</span>Competitors and alternatives, by module</h2>
+
+  <h3>Asset management, predictive maintenance and IoT monitoring</h3>
+  <div class="tw"><table>
+    <tr><th>Player</th><th>Positioning</th><th>Who they target</th><th>Source</th></tr>
+    <tr><td>Infinite Uptime (PlantOS)</td><td>"Prescriptive AI" sold as Production Outcomes as a Service: which fault to fix, why, by when. $35M Series C (Mar 2025); in 2026 Gartner MQ for Industrial AIoT.</td><td>Heavy process majors: JSW Steel across 139 plants <span class="claim">vendor claim</span>, Coromandel, Reliance, HMSI</td><td class="src"><a href="https://techcrunch.com/2025/03/10/infinite-uptime-bags-35m-to-help-factories-optimize-equipment-usage/">TechCrunch 2025</a> · <a href="https://www.infinite-uptime.com/">infinite-uptime.com</a> · <a href="https://www.infinite-uptime.com/news-media/">news 2026</a></td></tr>
+    <tr><td>Nanoprecise (MachineDoctor)</td><td>AI predictive maintenance on wireless vibration and acoustic sensors; PESO-certified for hazardous areas.</td><td>Large process and auto plants: IFFCO, Maruti Suzuki MAIL winner</td><td class="src"><a href="https://prnewswire.com/in/news-releases/nanoprecise-sci-corps-machinedoctor-achieves-peso-certification-for-hazardous-environments-301950642.html">PESO release</a> · <a href="https://www.casestudies.com/company/nanoprecise-sci-corp/case-study/detection-of-a-bearing-outer-race-failure-on-a-critical-pump-saved-downtime-cost-of-145k">IFFCO case</a> · <a href="https://www.prnewswire.com/in/news-releases/nanoprecise-sci-corp-wins-maruti-suzuki-cohort-5-of-the-mail-programme-859354970.html">Maruti MAIL</a></td></tr>
+    <tr><td>Altizon (Datonis)</td><td>Pune-born IIoT platform and digital factory suite: edge, data lake, manufacturing analytics. 270+ projects, 130+ enterprises <span class="claim">vendor claim</span>.</td><td>Large multi-plant enterprises: JK Tyre, Pernod Ricard India, Varroc</td><td class="src"><a href="https://inc42.com/startups/altizon-iiot-platform-manufacturing-42next">Inc42</a> · <a href="https://prnewswire.com/news-releases/pernod-ricard-india-partners-with-altizon-in-their-iiot-led-manufacturing-operations-digitization-journey-301340749.html">Pernod release</a></td></tr>
+    <tr><td>Siemens Senseye</td><td>Global enterprise predictive-maintenance software; Siemens-owned since June 2022.</td><td>Global enterprises on the Siemens stack</td><td class="src"><a href="https://news.siemens.co.uk/news/siemens-acquires-senseye-predictive-maintenance-and-asset-intelligence-for-industrial-companies">Siemens 2022</a></td></tr>
+    <tr><td>Presage Insights</td><td>Early-stage Indian PdM startup (Mohali); Rs 5.6 cr seed, Sep 2025.</td><td>Indian plants (early stage)</td><td class="src"><a href="https://www.industrialautomationindia.in/news/presage-insights-raises-5-6-crore-predictive-maintenance-india">Industrial Automation 2025</a></td></tr>
+  </table></div>
+
+  <h3>Visitor, vehicle and material management</h3>
+  <div class="tw"><table>
+    <tr><th>Player</th><th>Positioning</th><th>Who they target</th><th>Source</th></tr>
+    <tr><td>Veris (Digicred, 2016)</td><td>Cloud visitor management: pre-registration, host alerts, multi-location.</td><td>Enterprises and multi-office corporates; lists manufacturing units among targets</td><td class="src"><a href="https://www.capterra.in/software/166484/veris">Capterra</a> · <a href="https://www.businesstoday.in/amp/magazine/the-buzz/story/veris-visitor-management-on-the-cloud-103948-2018-04-30">Business Today 2018</a></td></tr>
+    <tr><td>Vizitor</td><td>Visitor management for offices, factories, hospitals, campuses, government.</td><td>Mixed; manufacturing is one segment</td><td class="src"><a href="https://www.capterra.in/software/183248/vizitor">Capterra India</a></td></tr>
+    <tr><td>Happy Visitor</td><td>Visitor management with a factory compliance pitch: Factories Act 1948, contractor induction, multi-gate.</td><td>Manufacturing plants (content-led)</td><td class="src"><a href="https://happy-visitor.com/visitor-management-system-for-manufacturing-plants/">2026 guide</a></td></tr>
+    <tr><td>VizMan, BlueTree, Vizmo</td><td>Indian VMS products listed against Veris on directories.</td><td>Offices and facilities</td><td class="src"><a href="https://sourceforge.net/software/visitor-management/india/">SourceForge India</a></td></tr>
+  </table></div>
+  <p class="note">Observed: these tools centre on the visitor. Linked vehicle, material and camera records were not observed on the pages checked.</p>
+
+  <h3>Factory surveillance and video analytics</h3>
+  <div class="tw"><table>
+    <tr><th>Player</th><th>Positioning</th><th>Who they target</th><th>Source</th></tr>
+    <tr><td>Wobot.ai (Delhi)</td><td>AI on existing CCTV for SOP, hygiene and PPE checklists.</td><td>Multi-site businesses, plus manufacturing and food processing</td><td class="src"><a href="https://wobot.ai/blog/all-about-our-webinar-computer-vision-brains-behind-workplace-safety-and-employee-productivity">wobot.ai 2022</a></td></tr>
+    <tr><td>Ripik.ai</td><td>Cameras, sensors and AI for process and quality in heavy industry; FY25 revenue about Rs 23.5 cr (reported).</td><td>Steel, cement, metals: Tata Steel, JSW, Holcim (reported)</td><td class="src"><a href="https://www.indianstartuptimes.com/?p=27390">Indian Startup Times</a> · <a href="https://inc42.com/company/ripikai/">Inc42</a></td></tr>
+    <tr><td>Agrex.ai (AIVIS)</td><td>Edge-AI video analytics for Indian factories: PPE, zones, ANPR. Heavy SEO publishing.</td><td>Indian manufacturing plants</td><td class="src"><a href="https://www.agrexai.com/ai-video-analytics-platform-manufacturing-india/">agrexai.com 2026</a></td></tr>
+    <tr><td>Videonetics (Kolkata)</td><td>Unified video computing platform with ANPR for industrial, infrastructure and city sites.</td><td>Large industrial sites, cities</td><td class="src"><a href="https://firesafeworld.com/videonetics-forays-into-bangladesh-market-by-securing-one-of-the-largest-manufacturing-plants">Fire Safe World</a></td></tr>
+  </table></div>
+
+  <h3>Industrial energy monitoring</h3>
+  <div class="tw"><table>
+    <tr><th>Player</th><th>Positioning</th><th>Who they target</th><th>Source</th></tr>
+    <tr><td>Elmeasure (Bengaluru)</td><td>Meter and panel-instrument maker moving into IoT energy dashboards; likely already on many plant panels.</td><td>Industrial and commercial, through dealers and OEMs</td><td class="src"><a href="https://www.indiantextilemagazine.in/wp-content/uploads/2021/03/TM-Feb-21-ImpactFeature-Elmeasure-Revised.pdf">Indian Textile Magazine 2021</a> · <a href="https://www.energetica-india.net/news/webnms-and-elmeasure-announce-partnership-to-bring-iot-enabled-energy-management-solutions">Energetica</a></td></tr>
+    <tr><td>Faclon Labs (IOsense)</td><td>IIoT for energy, utilities and machines; ISO 50001 EMS; G2 headline "2-month implementation, 10-month ROI".</td><td>Manufacturing and utilities, mid to large</td><td class="src"><a href="https://www.faclon.com/iot-energy-management-solution">faclon.com</a> · <a href="https://g2.com/products/faclon-labs/reviews">G2</a></td></tr>
+    <tr><td>Zenatix (WattMan)</td><td>IoT energy and asset management; part of Schneider Electric since 2023.</td><td>Retail chains, banks, buildings (less factory)</td><td class="src"><a href="https://zenatix.com">zenatix.com</a> · <a href="https://app.mergerlinks.com/transactions/2023-10-05-zenatix-solutions">MergerLinks 2023</a></td></tr>
+  </table></div>
+
+  <h3>Freight bidding and procurement</h3>
+  <div class="tw"><table>
+    <tr><th>Player</th><th>Positioning</th><th>Who they target</th><th>Source</th></tr>
+    <tr><td>Freight Tiger (Mumbai, 2014)</td><td>Freight marketplace plus TMS; about 5% of India's freight and 450+ shippers <span class="claim">vendor claim</span>. Tata Motors holds about 42 to 46%.</td><td>Large shippers and logistics providers</td><td class="src"><a href="https://www.autocarpro.in/news/tata-motors-invests-%e2%82%b9120-crore-in-freight-tiger-raises-total-commitment-to-%e2%82%b9270-crore-128987">Autocar Pro 2025</a> · <a href="https://www.theweek.in/news/biz-tech/2023/10/19/tata-motors-to-acquire-26-79-per-cent-stake-in-freight-tiger-for-rs-150-crore.html">The Week 2023</a></td></tr>
+    <tr><td>SuperProcure (Kolkata)</td><td>Freight procurement TMS built on reverse e-auctions; "AI-native" pitch; 300+ enterprise customers <span class="claim">vendor claim</span>.</td><td>VPs and heads of logistics at large manufacturers</td><td class="src"><a href="https://www.superprocure.com/blog/ai-native-tms-freight-sourcing-india/">Blog, Jul 2026</a> · <a href="https://www.cbinsights.com/compare/freight-tiger-vs-superprocure">CB Insights</a></td></tr>
+    <tr><td>LoRRI (LogisticsNow)</td><td>Freight intelligence and procurement: benchmarking, RFQs, auctions; 2,300+ transporters <span class="claim">vendor claim</span>.</td><td>Manufacturers and transporters; Apollo Tyres, Perfetti Van Melle named <span class="claim">vendor claim</span></td><td class="src"><a href="https://www.cbinsights.com/company/logisticsnow">CB Insights</a> · <a href="https://apps.apple.com/pg/app/mylorri/id6480161330">MyLoRRI app</a></td></tr>
+  </table></div>
+  <p class="note">Dropped because they could not be confirmed in this scan: Zeptogram, VisitorBuddy. Freightwalla is international forwarding, not like-for-like with FreightBid.</p>
+
+  <h2><span class="n">02</span>The gap PlantiqX can own</h2>
+  <p>Competitors split the plant into single jobs, and the strongest of them sell to the largest plants. Nobody we found joins the gate, the machines, the cameras, the meters and the freight desk for a mid-size plant.</p>
+
+  <div class="map" role="img" aria-label="Positioning map: scope of the offer against size of the buyer. Most competitors sit at one module; PlantiqX sits at whole plant, mid-size buyer.">
+    <svg viewBox="0 0 860 400" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+      <rect x="90" y="20" width="740" height="320" fill="#FBFAF7" stroke="#E4E1DA"/>
+      <line x1="460" y1="20" x2="460" y2="340" stroke="#E4E1DA" stroke-dasharray="4 4"/>
+      <line x1="90" y1="180" x2="830" y2="180" stroke="#E4E1DA" stroke-dasharray="4 4"/>
+      <text x="460" y="372" text-anchor="middle" font-size="13" fill="#6B6875">Scope of the offer: one module  →  whole plant</text>
+      <text x="30" y="180" text-anchor="middle" font-size="13" fill="#6B6875" transform="rotate(-90 30 180)">Buyer: mid-size  →  large enterprise</text>
+      <g font-size="12.5" fill="#17161B">
+        <circle cx="150" cy="52" r="6" fill="#9C7BF0"/><text x="162" y="56">Infinite Uptime</text>
+        <circle cx="150" cy="84" r="6" fill="#9C7BF0"/><text x="162" y="88">Ripik.ai</text>
+        <circle cx="290" cy="64" r="6" fill="#9C7BF0"/><text x="302" y="68">Siemens Senseye</text>
+        <circle cx="290" cy="100" r="6" fill="#9C7BF0"/><text x="302" y="104">Nanoprecise</text>
+        <circle cx="160" cy="132" r="6" fill="#9C7BF0"/><text x="172" y="136">Freight Tiger · SuperProcure · LoRRI</text>
+        <circle cx="540" cy="78" r="6" fill="#9C7BF0"/><text x="552" y="82">Altizon (platform)</text>
+        <circle cx="470" cy="210" r="6" fill="#9C7BF0"/><text x="482" y="214">Faclon Labs (energy + machines)</text>
+        <circle cx="150" cy="232" r="6" fill="#9C7BF0"/><text x="162" y="236">Veris · Vizitor · Happy Visitor</text>
+        <circle cx="150" cy="266" r="6" fill="#9C7BF0"/><text x="162" y="270">Wobot · Agrex.ai</text>
+        <circle cx="150" cy="300" r="6" fill="#9C7BF0"/><text x="162" y="304">Elmeasure (meters)</text>
+      </g>
+      <circle cx="760" cy="290" r="10" fill="#FF8700"/>
+      <text x="742" y="294" text-anchor="end" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" fill="#5925DC">PlantiqX</text>
+    </svg>
+  </div>
+  <p class="note">Placement is Busy Fox's reading of each player's own site and customer list (inferred), not measured data.</p>
+
+  <div class="own">
+    <div class="k">The line to own</div>
+    <p>The gate, the machines, the cameras, the meters and the freight desk of a mid-size plant on one login, retrofitted onto the machines it already has, with a team that builds the sensor or panel when nothing off the shelf fits.</p>
+  </div>
+  <p><strong>Why it is credible:</strong> a competitor's own research (MIT SMR India x Infinite Uptime, 2026) finds 62% of firms keep machine and process data scattered across systems. That is the one-platform argument.</p>
+  <p><strong>Closest threats (inferred):</strong> Faclon Labs (energy, machines and utilities in one) and Altizon (platform story). <strong>Elmeasure</strong> looks more like a partner, since its meters are already on panels PlantiqX would read over Modbus.</p>
+  <p><strong>Still to prove:</strong> uptime gained, rupees saved on energy and freight, and gate time saved, from the two live VEMS clients and the furnace project. Until then these are claims, not proof.</p>
+
+  <h2><span class="n">03</span>Market facts worth quoting</h2>
+  <ul class="facts">
+    <li><span class="big">$14.1B → $23.3B</span>India industrial IoT market, 2024 to 2029 (10.5% CAGR).<span class="s"><a href="https://www.marketsandmarkets.com/Market-Reports/geography/industrial-internet-of-things-market/India">MarketsandMarkets, India IIoT</a> · 2024 base</span></li>
+    <li><span class="big">5.93 crore</span>MSMEs registered on the Udyam portal as of 4 Feb 2025.<span class="s"><a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2099687">PIB, Ministry of MSME</a> · Feb 2025</span></li>
+    <li><span class="big">2.6M+</span>MSME units in Telangana; EESL names Telangana and Hyderabad as priority areas for MSME technology adoption.<span class="s"><a href="https://telanganatoday.com/telangana-emerges-as-a-major-opportunity-for-advanced-technologies-with-2-6-million-plus-msmes">Telangana Today</a> · 20 Sep 2026</span></li>
+    <li><span class="big">23%</span>of MSMEs use AI, IoT or analytics, though 67% are digitally equipped; 84% say the value is unclear (n = 400+, mixed sectors).<span class="s"><a href="https://cmrindia.com/67-of-msmes-demonstrate-digital-readiness-across-core-and-advanced-technologies-finds-cmr-study/">CMR study</a> · Jun 2025</span></li>
+    <li><span class="big">62%</span>of equipment-heavy firms keep machine and process data across several systems; about 59% lack structured maintenance histories; only 9% run fully prescriptive maintenance. Sample size not stated.<span class="s"><a href="https://themachinemaker.com/news/new-mit-smr-india-infinite-uptime-study-highlights-operational-gaps-slowing-industrial-ai-adoption/">MIT SMR India x Infinite Uptime</a> · Mar 2026</span></li>
+    <li><span class="big">160M+</span>LinkedIn members in India, the 2nd-largest market, up 50%+ in two years; Indian video uploads up 60%. A 2026 report puts it at 167M.<span class="s"><a href="https://www.storyboard18.com/brand-makers/linkedin-taps-indias-ai-savvy-workforce-as-membership-surges-past-160-million-80480.htm">Storyboard18</a> · Sep 2025 · <a href="https://www.newsbytesapp.com/news/business/linkedins-user-base-in-india-grows-20-in-a-year/tldr">NewsBytes</a> · 2026</span></li>
+  </ul>
+  <p class="note" style="margin-top:12px">Left out: an India-only count of LinkedIn B2B decision makers (none published that we found) and manufacturing share of GDP (sources conflict, 13 to 17%).</p>
+
+  <h2><span class="n">04</span>What competitors do on social and content</h2>
+  <div class="tw"><table>
+    <tr><th>Player</th><th>What we observed</th><th>Lesson for PlantiqX</th><th>Source</th></tr>
+    <tr><td>Infinite Uptime</td><td>Authority through co-branded research (MIT SMR India three-part series, Mar 2026), Gartner MQ news (Oct 2026), a CEO TV interview (NDTV Profit, May 2026) and partner news. Shared mainly as social posts. No webinars or podcasts on its news page.</td><td>Publish one number the market quotes: a small "mid-size plant pulse" survey. Put the founders on camera.</td><td class="src"><a href="https://www.infinite-uptime.com/news-media/">News page</a></td></tr>
+    <tr><td>Nanoprecise</td><td>A library of on-demand webinars behind sign-up forms (energy-centred maintenance, false positives in PdM, "the people part of AI"), some co-hosted with AWS and PEMAC.</td><td>A quarterly gated webinar is this category's lead magnet. Start with the OPEX Chemicals talk.</td><td class="src"><a href="https://nanoprecise.io/resources/events-webinars/">Webinars page</a></td></tr>
+    <tr><td>SuperProcure</td><td>Long-form posts written for VPs of logistics, one CTA ("Book a personalised demo"), plus a public Indian Freight Index page as a data hook.</td><td>FreightBid can publish a monthly lane-rate snapshot from its own bids.</td><td class="src"><a href="https://www.superprocure.com/blog/ai-native-tms-freight-sourcing-india/">Blog, Jul 2026</a></td></tr>
+    <tr><td>Wobot.ai</td><td>A webinar plus a recap post listing exact detections: no hard hat, person in a forklift zone, unattended machine, missing extinguisher.</td><td>Show the detection, not "AI": one use case per post.</td><td class="src"><a href="https://wobot.ai/blog/all-about-our-webinar-computer-vision-brains-behind-workplace-safety-and-employee-productivity">wobot.ai 2022</a></td></tr>
+    <tr><td>Agrex.ai, Mikshi, Happy Visitor</td><td>India-specific "2026 guide" pages built on compliance hooks: Factories Act 1948 for gates, GMP for pharma CCTV.</td><td>Use DPDP Act 2023 and the Factories Act for VEMS, GMP for pharma plants.</td><td class="src"><a href="https://www.agrexai.com/ai-video-analytics-india-manufacturing-guide-2026/">Agrex</a> · <a href="https://mikshi.mantratec.com/Blog/ai-CCTV-surveillance-gmpcompliance-pharma">Mikshi</a> · <a href="https://happy-visitor.com/visitor-management-system-for-manufacturing-plants/">Happy Visitor</a></td></tr>
+    <tr><td>Faclon Labs</td><td>A G2 profile with 18 reviews; headline claims "2-month implementation, 10-month ROI".</td><td>Collect written reviews and one quoted number from the two live VEMS clients.</td><td class="src"><a href="https://g2.com/products/faclon-labs/reviews">G2</a></td></tr>
+  </table></div>
+
+  <h2><span class="n">05</span>Where Indian plant heads gather</h2>
+  <div class="tw"><table>
+    <tr><th>Event or community</th><th>Why it matters for PlantiqX</th><th>Source</th></tr>
+    <tr><td>IMTEX + Tooltech + Digital Manufacturing 2027</td><td>21 to 27 Jan 2027, BIEC Bengaluru (IMTMA). India's biggest manufacturing-technology show.</td><td class="src"><a href="https://www.imtex.in/">imtex.in</a></td></tr>
+    <tr><td>OPEX in Chemicals Summit (Inventicon)</td><td>PlantiqX presents "Bridging Legacy and Digital" at the 8th edition. The 2025 edition ran in Mumbai, 17 to 19 Nov.</td><td class="src">PlantiqX profile · <a href="https://accrue.com/events/annual-opex-in-chemicals-summit-5CncCm5PpH2F7hF7ff">Accrue listing</a></td></tr>
+    <tr><td>CII Energy Efficiency Summit</td><td>25th edition at HICC Hyderabad, 16 to 18 Sep 2026. Industry committed Rs 3,590 cr to electrification, waste heat and digital tools. Natural home for the Energy module.</td><td class="src"><a href="https://themachinemaker.com/news/25th-cii-energy-efficiency-summit-highlights-ai-electrification-and-innovation/">The Machine Maker 2026</a> · <a href="https://energy.greenbusinesscentre.com/mv/energysummit/">CII GBC</a></td></tr>
+    <tr><td>CII advanced manufacturing conference</td><td>Hyderabad, 28 Oct 2026; AI adoption was the theme.</td><td class="src"><a href="https://www.uniindia.com/business-economy/business-telangana-cii-conference-28dc14/228605">UNI 2026</a></td></tr>
+    <tr><td>FTCCI (IITEX expo, MSME Spark)</td><td>Hyderabad's chamber. IITEX 3rd edition ran at HITEX, 26 to 28 Jun 2026, for manufacturing and automation buyers.</td><td class="src"><a href="https://www.townscript.com/e/iitex-industrial-innovation-technology-expo-2026-242032">Townscript</a> · <a href="https://www.ftcci.in/pages/upcoming-events">FTCCI events</a></td></tr>
+    <tr><td>BDMA(I), Bulk Drug Manufacturers Association</td><td>Hyderabad-based; 350+ member companies, about 75% MSMEs. Pharma and API plants are the SETL-adjacent beachhead.</td><td class="src"><a href="https://www.biospectrumindia.com/interviews/17/25075/india-is-well-positioned-to-reduce-its-dependence-on-imported-apis-and-potentially-challenge-chinas-dominance-in-the-global-market.html">BioSpectrum</a></td></tr>
+  </table></div>
+  <h3>LinkedIn hashtags</h3>
+  <p class="tags">#Industry40 &nbsp;#IIoT &nbsp;#SmartManufacturing &nbsp;#PredictiveMaintenance &nbsp;#OperationalExcellence &nbsp;#ManufacturingExcellence &nbsp;#EnergyEfficiency &nbsp;#MakeInIndia &nbsp;#MSME &nbsp;#PharmaManufacturing &nbsp;#Hyderabad</p>
+  <p class="note">Follower counts not checked, since LinkedIn needs a login.</p>
+
+  <footer>
+    PlantiqX: Market &amp; Competitor Scan · Prepared by Busy Fox for PlantiqX · 18 Nov 2026 · Internal working document. Competitor details come from public pages and may change; vendor claims are not independently verified.
+  </footer>
+</main>
+</body>
+</html>

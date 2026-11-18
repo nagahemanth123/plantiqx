@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PlantiqX Sales Deck</title>
+<link rel="stylesheet" href="deck.css">
+<style>
+/* slide-specific */
+.s1 h1{font-size:124px;max-width:1250px;margin-bottom:34px}
+.s1 .lead{max-width:1000px}
+.s1 .top{position:absolute;left:120px;top:96px;right:120px;display:flex;justify-content:space-between;align-items:center}
+.s1 .bottom{position:absolute;left:120px;bottom:120px}
+.s2 .grid{display:grid;grid-template-columns:640px 1fr;gap:120px;align-items:start}
+.s2 h2{font-size:80px}
+.s2 .rows{--c1:250px}
+.s2 .rows li span{color:#3b3942}
+.s3 .txt{position:absolute;left:120px;top:110px;width:880px}
+.s3 h2{font-size:96px;margin-bottom:56px}
+.s3 ol{list-style:none;counter-reset:n}
+.s3 li{counter-increment:n;position:relative;padding:20px 0 20px 76px;border-bottom:1px solid #2c2934;font-size:30px}
+.s3 li::before{content:"0" counter(n);position:absolute;left:0;top:24px;font-family:var(--f-mono);font-size:22px;color:var(--orange)}
+.s3 .ph{right:0;top:0;width:900px;height:1080px}
+.s4 h2{margin-bottom:80px}
+.s4 .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:60px}
+.s4 .cols div{border-top:3px solid var(--ink);padding-top:28px}
+.s4 .cols h3{margin-bottom:18px;font-size:42px}
+.s4 .cols p{font-size:30px;color:#3b3942;line-height:1.45}
+.s4 .answer{position:absolute;left:120px;right:120px;bottom:150px;display:flex;gap:40px;align-items:center;border-top:1.5px solid var(--purple);padding-top:36px}
+.s4 .answer p{font-family:var(--f-head);font-size:44px;letter-spacing:-0.025em;line-height:1.15;color:var(--purple);font-weight:600}
+/* platform diagram */
+.s5 h2{margin-bottom:84px}
+.mods{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
+.mods div{border:1.5px solid #3a3644;padding:30px 28px;min-height:220px;position:relative}
+.mods b{display:block;font-family:var(--f-head);font-size:36px;font-weight:600;letter-spacing:-0.02em;line-height:1.1;margin-bottom:8px}
+.mods span{font-size:24px;color:#a9a5b3}
+.mods div::after{content:"";position:absolute;left:50%;bottom:-68px;height:66px;border-left:1.5px dashed #5b5666}
+.layer{margin-top:68px;background:var(--purple);padding:40px 44px;display:flex;justify-content:space-between;align-items:center}
+.layer b{font-family:var(--f-head);font-size:44px;font-weight:600;letter-spacing:-0.02em}
+.layer span{font-family:var(--f-mono);font-size:20px;letter-spacing:.05em;color:#e3dafd}
+.src{margin-top:66px;border:1.5px dashed #5b5666;padding:32px 44px;display:flex;justify-content:space-between;align-items:center;position:relative}
+.src::before{content:"";position:absolute;left:50%;top:-66px;height:64px;border-left:2px solid var(--orange)}
+.src .mono{color:var(--orange)}
+.src span{font-size:25px;color:#c9c6d1}
+.flow{display:flex;gap:0;margin-top:30px;margin-bottom:34px}
+.flow div{flex:1;border-top:3px solid var(--purple);padding:18px 18px 0 0;position:relative}
+.flow div::before{content:attr(data-n);font-family:var(--f-mono);font-size:18px;color:var(--purple);display:block;margin-bottom:6px}
+.flow b{font-family:var(--f-head);font-size:26px;font-weight:600;letter-spacing:-0.02em;display:block;line-height:1.15}
+.flow span{font-size:20px;color:var(--steel);line-height:1.35;display:block;margin-top:6px}
+/* custom */
+.s11 .txt{position:absolute;left:120px;top:100px;width:1020px}
+.s11 h2{font-size:70px;margin-bottom:40px}
+.s11 .ph{right:0;top:0;width:700px;height:1080px}
+.work{list-style:none;margin-top:36px;border-top:1.5px solid #fff}
+.work li{display:grid;grid-template-columns:270px 1fr 200px;gap:28px;padding:18px 0;border-bottom:1px solid #2c2934;font-size:22px;line-height:1.4;color:#c9c6d1;align-items:start}
+.work b{font-family:var(--f-head);font-size:26px;font-weight:600;color:#fff;letter-spacing:-0.02em}
+.work em{font-style:normal;font-family:var(--f-mono);font-size:17px;letter-spacing:.06em;text-transform:uppercase}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.two .mono{color:var(--orange);margin-bottom:12px;display:block}
+.two p{font-size:23px;color:#c9c6d1;line-height:1.45}
+/* brownfield */
+.s12 .big{display:grid;grid-template-columns:1fr;gap:0;margin-top:20px;border-top:1.5px solid var(--ink)}
+.s12 .big div{padding:24px 0;border-bottom:1px solid var(--line)}
+.s12 .big b{font-family:var(--f-head);font-size:40px;font-weight:600;letter-spacing:-0.025em;display:block;line-height:1.1}
+.s12 .big span{font-size:24px;color:#3b3942;display:block;margin-top:6px}
+/* who */
+.s13 .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:100px;margin-top:64px}
+.s13 .rows{--c1:330px}
+.s13 .rows li{font-size:27px;padding:24px 0}
+.s13 .rows li span{color:#3b3942}
+.s13 .roles li{font-size:30px;padding:20px 0 20px 34px}
+/* proof */
+.s14 .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:100px;margin-top:56px}
+.status{list-style:none;border-top:1.5px solid var(--ink)}
+.status li{display:flex;justify-content:space-between;align-items:center;padding:19px 0;border-bottom:1px solid var(--line);font-size:28px}
+.status li b{font-family:var(--f-head);font-weight:600;letter-spacing:-0.02em}
+.status .badge{font-size:17px;padding:7px 13px 7px 11px;gap:9px}
+.status .badge::before{width:8px;height:8px}
+.cred{border-top:3px solid var(--purple);padding-top:26px;margin-bottom:46px}
+.cred .mono{color:var(--purple);display:block;margin-bottom:14px}
+.cred p{font-size:28px;color:#3b3942}
+.cred p b{color:var(--ink)}
+/* why */
+.s15 h2{margin-bottom:96px;font-size:96px}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:80px 70px}
+.why div{border-top:2px solid rgba(255,255,255,.55);padding-top:22px}
+.why .n{font-family:var(--f-mono);font-size:20px;color:var(--orange);margin-bottom:12px;display:block}
+.why b{font-family:var(--f-head);font-size:40px;font-weight:600;letter-spacing:-0.02em;display:block;line-height:1.1;margin-bottom:10px}
+.why p{font-size:26px;color:#e3dafd;line-height:1.45}
+/* team */
+.s16 .grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;margin-top:60px}
+.s16 .band{position:absolute;left:0;right:0;bottom:0;height:300px;width:100%;object-fit:cover;object-position:50% 45%}
+.s16 .foot{bottom:340px}
+.s16 .grid div{border-top:3px solid var(--ink);padding-top:30px}
+.s16 .grid h3{font-size:50px;letter-spacing:-0.03em}
+.s16 .grid .mono{color:var(--purple);display:block;margin:12px 0 22px}
+.s16 .grid p{font-size:25px;color:#3b3942}
+/* start */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-top:80px}
+.steps div{border-top:3px solid var(--purple);padding-top:26px}
+.steps .n{font-family:var(--f-head);font-size:72px;font-weight:600;color:var(--purple);letter-spacing:-0.04em;line-height:1;display:block;margin-bottom:22px}
+.steps b{font-family:var(--f-head);font-size:40px;font-weight:600;letter-spacing:-0.02em;display:block;margin-bottom:10px}
+.steps p{font-size:27px;color:#3b3942}
+.start{position:absolute;left:120px;right:120px;bottom:150px;display:flex;justify-content:space-between;align-items:center;background:var(--night);color:#fff;padding:36px 46px}
+.start p{font-family:var(--f-head);font-size:38px;font-weight:600;letter-spacing:-0.025em}
+.start .cta{background:var(--orange);color:var(--ink);font-family:var(--f-head);font-weight:600;font-size:28px;padding:18px 30px;letter-spacing:-0.01em}
+/* close */
+.s18 h1{font-size:150px;margin-bottom:30px}
+.s18 .txt{position:absolute;left:120px;top:150px}
+.s18 .contact{position:absolute;left:120px;right:120px;bottom:130px;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;border-top:1.5px solid rgba(255,255,255,.6);padding-top:30px}
+.s18 .contact .mono{color:var(--orange);display:block;margin-bottom:10px;font-size:17px}
+.s18 .contact p{font-size:26px}
+.foot .wm img{height:30px;margin:0}.foot .wm .wm-w{display:none}
+.dark .foot .wm .wm-w,.purple .foot .wm .wm-w{display:block}.dark .foot .wm .wm-c,.purple .foot .wm .wm-c{display:none}
+.sm h2{margin-bottom:70px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:70px}
+.stats div{border-top:3px solid var(--ink);padding-top:30px}
+.stats .big{font-family:var(--f-head);font-size:150px;font-weight:600;letter-spacing:-0.05em;line-height:.9;color:var(--purple);display:block;margin-bottom:24px}
+.stats div:nth-child(2) .big{color:var(--orange-700)}
+.stats p{font-size:27px;color:#3b3942;line-height:1.42}
+.stats p b{color:var(--ink)}
+.stats small{display:block;margin-top:16px;font-family:var(--f-mono);font-size:16px;letter-spacing:.03em;color:var(--steel)}
+.sm .gap{position:absolute;left:120px;right:120px;bottom:140px;border-top:1.5px solid var(--purple);padding-top:30px;display:flex;justify-content:space-between;gap:60px;align-items:baseline}
+.sm .gap p{font-family:var(--f-head);font-size:36px;font-weight:600;letter-spacing:-0.02em;color:var(--purple);line-height:1.2;max-width:1300px}
+.sm .gap small{font-family:var(--f-mono);font-size:16px;color:var(--steel);max-width:380px;text-align:right}
+</style></head>
+<body>
+
+<!-- 01 COVER -->
+<div class="frame"><section class="slide dark s1">
+  <img class="ph full" src="../img/13-night-shift.jpg" alt="">
+  <div class="shade-l"></div><div class="shade-b"></div>
+  <div class="top"><img src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX" style="height:62px"><span class="mono" style="color:#c9c6d1">Where Minds and Machines Merge</span></div>
+  <div class="bottom">
+    <h1>Run your plant on what it’s telling you.</h1>
+    <p class="lead">One platform for your machines, gate, cameras, energy and freight, plus custom IoT for the problems no catalogue fits.</p>
+    <p class="mono" style="color:#9c98a6;margin-top:44px">For mid-size manufacturers · Hyderabad, India · plantiqx.com</p>
+  </div>
+</section></div>
+
+<!-- 02 PROBLEM -->
+<div class="frame"><section class="slide s2"><div class="pad">
+  <div class="grid">
+    <div><h2>Your plant already makes the data. It just lives in six places.</h2>
+      <p class="lead" style="margin-top:40px;font-size:30px">Nobody sees the whole plant in one place, so decisions run on memory, phone calls and month-end bills.</p></div>
+    <ul class="rows">
+      <li><b>Machines</b><span>Readings stay locked inside the controllers</span></li>
+      <li><b>Maintenance</b><span>History lives in spreadsheets and people’s memory</span></li>
+      <li><b>The gate</b><span>People, vehicles and material go into a paper register</span></li>
+      <li><b>Energy</b><span>Meters are read by hand; one bill arrives at month end</span></li>
+      <li><b>Cameras</b><span>Footage gets watched after something has gone wrong</span></li>
+      <li><b>Freight</b><span>Rates are agreed over phone calls and follow-ups</span></li>
+    </ul>
+  </div>
+  </div><div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>02 / 19</span></div>
+</section></div>
+
+<!-- 03 CONSEQUENCE -->
+<div class="frame"><section class="slide dark s3">
+  <img class="ph" src="../img/06-plant-office.jpg" alt="">
+  <div class="txt">
+    <h2>So the plant finds out late.</h2>
+    <ol>
+      <li>The breakdown is found after the line has stopped.</li>
+      <li>Nobody can say who is inside the plant during an emergency.</li>
+      <li>Peak-demand and power-factor charges show up on the bill.</li>
+      <li>The freight rate is never really compared.</li>
+      <li>When there’s a dispute, there’s no record to settle it.</li>
+    </ol>
+  </div>
+  <div class="foot" style="right:auto;width:880px"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>03 / 19</span></div>
+</section></div>
+
+<!-- 03b MARKET -->
+<div class="frame"><section class="slide sm"><div class="pad">
+  <h2>The gap is measured, and nobody owns it yet.</h2>
+  <div class="stats">
+    <div><span class="big">62%</span><p>of equipment-heavy Indian firms keep machine and process data across <b>several systems</b>; 59% have no structured maintenance history.</p><small>MIT SMR India × Infinite Uptime study, Mar 2026</small></div>
+    <div><span class="big">23%</span><p>of MSMEs use AI, IoT or analytics, though 67% already use digital tools. <b>84% say the value isn’t clear yet.</b></p><small>CMR MSME study, Jun 2025</small></div>
+    <div><span class="big">2.6M+</span><p>MSME units in Telangana alone. Hyderabad’s bulk-drug makers’ association has <b>350+ members</b>, about 75% MSMEs.</p><small>Telangana Today, Sep 2026 · BioSpectrum</small></div>
+  </div>
+  <div class="gap"><p>The specialists each sell one module, mostly to the largest steel, cement and fertiliser groups. One platform for the mid-size plant is open ground.</p><small>Competitor scan by Busy Fox, Nov 2026</small></div>
+  </div><div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>04 / 19</span></div>
+</section></div>
+
+<!-- 04 MARKET GAP -->
+<div class="frame"><section class="slide s4"><div class="pad">
+  <h2>What’s on offer today wasn’t built for a mid-size Indian plant.</h2>
+  <div class="cols">
+    <div><h3>Global platforms</h3><p>Built and priced for large enterprises, with long rollouts and a consultant for every change.</p></div>
+    <div><h3>Single-purpose apps</h3><p>One for the gate, one for energy, one for maintenance. Each solves one problem and talks to none of the others.</p></div>
+    <div><h3>Generic dashboards</h3><p>Charts on top of data you don’t have yet. They can’t read an old machine with no digital output.</p></div>
+  </div>
+  <div class="answer"><img src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX" style="height:52px"><p>One connected system, built around how your plant actually runs.</p></div>
+  </div><div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>05 / 19</span></div>
+</section></div>
+
+<!-- 05 PLATFORM -->
+<div class="frame"><section class="slide dark s5"><div class="pad">
+  <h2>One login. One data layer. Every module plugs in.</h2>
+  <div class="mods">
+    <div><b>Asset Management</b><span>+ IoT monitoring</span></div>
+    <div><b>Visitor &amp; Vehicle</b><span>+ material (VEMS)</span></div>
+    <div><b>Factory Surveillance</b><span>video analytics</span></div>
+    <div><b>Energy Monitoring</b><span>and management</span></div>
+    <div><b>FreightBid</b><span>logistics bidding</span></div>
+  </div>
+  <div class="layer"><b>PlantiqX platform layer</b><span>SINGLE LOGIN · ONE DATA LAYER · DASHBOARDS · ALERTS · REPORTS</span></div>
+  <div class="src"><span class="mono">Where the data comes from</span><span>Machines &amp; controllers · energy meters · cameras · gate devices &amp; mobile apps · shippers &amp; transporters</span></div>
+  </div><div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>06 / 19</span></div>
+</section></div>
+
+<!-- 06 ASSET -->
+<div class="frame"><section class="slide s6"><div class="mod">
+  <div class="img"><img src="../img/01-retrofit-gateway.jpg" alt="" style="object-position:40% 50%"></div>
+  <div class="txt">
+    <div class="kicker"><span class="mono">Asset Management + IoT Monitoring</span><span class="badge live">Live in production</span></div>
+    <h2>Plan maintenance around the machine, not the breakdown.</h2>
+    <ul class="feat">
+      <li>One register of every machine across one or many plants</li>
+      <li>Maintenance schedules with a full history for each asset</li>
+      <li>Downtime you can see: what stopped, where, for how long</li>
+      <li>Live readings bound to the asset, with threshold alerts</li>
+      <li>Connects over Modbus, OPC-UA and MQTT</li>
+    </ul>
+    <div class="note"><b>In practice:</b> a deployed furnace project tracks set value against present temperature in real time, alerts the moment it crosses, and logs cycle on/off and door open/close.</div>
+  </div>
+  <div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>07 / 19</span></div>
+</div></section></div>
+
+<!-- 07 VEMS -->
+<div class="frame"><section class="slide s7"><div class="mod flip">
+  <div class="txt">
+    <div class="kicker"><span class="mono">Visitor, Vehicle &amp; Material</span><span class="badge live">Deployed</span></div>
+    <h2>Turn the gate from a paper register into a record.</h2>
+    <ul class="feat">
+      <li>QR entry on the visitor’s phone, approved by the host first</li>
+      <li>Every vehicle in and out, logged from a mobile app</li>
+      <li>Photo records and security checks at the gate</li>
+      <li>Who is on site right now, with audit-ready exports</li>
+      <li>One login across every location; SAML 2.0 SSO with Microsoft Entra ID</li>
+    </ul>
+    <div class="note"><b>Running today</b> across all locations at two manufacturing clients, with data-processing terms drafted around India’s DPDP Act, 2023.</div>
+  </div>
+  <div class="img"><img src="../img/02-gate-qr.jpg" alt="" style="object-position:35% 50%"></div>
+  <div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>08 / 19</span></div>
+</div></section></div>
+
+<!-- 08 SURVEILLANCE -->
+<div class="frame"><section class="slide dark s8"><div class="mod">
+  <div class="img"><img src="../img/09-v-cctv-yard.jpg" alt="" style="object-position:50% 40%"></div>
+  <div class="txt">
+    <div class="kicker"><span class="mono" style="color:#b9a2ff">Factory Surveillance</span><span class="badge pilot">In user acceptance testing</span></div>
+    <h2>Cameras that raise the alert during the shift, not after it.</h2>
+    <ul class="feat">
+      <li>Helmet and hi-vis checks in marked areas</li>
+      <li>Alerts for restricted zones and after-hours entry</li>
+      <li>Number-plate reading at the gate, linked to the visit record</li>
+      <li>People and vehicle counts at gates and yards</li>
+      <li>Every alert carries its own snapshot or clip</li>
+    </ul>
+    <div class="note"><b>Built to work with the gate and asset modules,</b> so a disputed entry, load or damage claim comes with evidence attached.</div>
+  </div>
+  <div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>09 / 19</span></div>
+</div></section></div>
+
+<!-- 09 ENERGY -->
+<div class="frame"><section class="slide s9"><div class="mod flip">
+  <div class="txt">
+    <div class="kicker"><span class="mono">Energy Monitoring &amp; Management</span><span class="badge pilot">In user acceptance testing</span></div>
+    <h2>See where your power goes: by machine, line and shift.</h2>
+    <ul class="feat">
+      <li>Live consumption from meters over Modbus, wired or LTE</li>
+      <li>Peak-demand and power-factor alerts before limits are crossed</li>
+      <li>DG set run-time and load beside grid consumption</li>
+      <li>Flags equipment left running after the shift ends</li>
+      <li>Shares data with Asset Management: a motor drawing too much shows up in both</li>
+    </ul>
+    <div class="note"><b>Energy becomes something the team manages,</b> not a bill it pays, with a baseline that shows whether an improvement actually worked.</div>
+  </div>
+  <div class="img"><img src="../img/03-panel-room.jpg" alt="" style="object-position:50% 50%"></div>
+  <div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>10 / 19</span></div>
+</div></section></div>
+
+<!-- 10 FREIGHTBID -->
+<div class="frame"><section class="slide s10"><div class="mod">
+  <div class="img"><img src="../img/05-loading-bay.jpg" alt="" style="object-position:55% 50%"></div>
+  <div class="txt">
+    <div class="kicker"><span class="mono">FreightBid</span><span class="badge live">Deployed</span></div>
+    <h2>Freight bought on bids, not phone calls.</h2>
+    <div class="flow">
+      <div data-n="01"><b>Publish</b><span>Shipper posts the load and details</span></div>
+      <div data-n="02"><b>Bid</b><span>Transporters quote online</span></div>
+      <div data-n="03"><b>Compare</b><span>Side by side, in one view</span></div>
+      <div data-n="04"><b>Award</b><span>Recorded against the bid</span></div>
+    </div>
+    <ul class="feat">
+      <li>A full bid history for every load, ready for audit</li>
+      <li>More transporters get a fair chance to bid; shippers stop relying on a small circle</li>
+    </ul>
+    <div class="note"><b>Live across client locations</b> at freightbid.plantiqx.com</div>
+  </div>
+  <div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>11 / 19</span></div>
+</div></section></div>
+
+<!-- 11 CUSTOM IOT -->
+<div class="frame"><section class="slide dark s11">
+  <img class="ph" src="../img/12-v-furnace.jpg" alt="" style="object-position:50% 50%">
+  <div class="txt">
+    <p class="mono o" style="margin-bottom:26px">The X in PlantiqX · Custom IoT &amp; embedded</p>
+    <h2>When your problem doesn’t fit a module, we build around it.</h2>
+    <div class="two">
+      <div><span class="mono">What we build</span><p>Sensing and instrumentation for machines, furnaces and utilities. Embedded controllers, panels and test jigs. Gateways that carry Modbus and other plant signals to the cloud.</p></div>
+      <div><span class="mono">What you get on top</span><p>Dashboards, alerts and reports on the same platform as the standard modules, so custom work never becomes another island.</p></div>
+    </div>
+    <ul class="work">
+      <li><b>Furnace monitoring</b><span>Set value vs present temperature, live alerts, cycle and door states</span><em style="color:#4fd394">Deployed</em></li>
+      <li><b>Controller test jig</b><span>Hardware-in-the-loop panel, growing into a digital twin</span><em style="color:#ffb24d">In progress</em></li>
+      <li><b>Generator control</b><span>Wireless control and monitoring of DG sets and their loads</span><em style="color:#9c98a6">Proposed</em></li>
+    </ul>
+  </div>
+  <div class="foot" style="right:auto;width:1020px"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>12 / 19</span></div>
+</section></div>
+
+<!-- 12 BROWNFIELD -->
+<div class="frame"><section class="slide s12"><div class="mod">
+  <div class="img"><img src="../img/07-v-vibration-sensor.jpg" alt="" style="object-position:50% 50%"></div>
+  <div class="txt">
+    <p class="mono p" style="margin-bottom:30px">Brownfield first</p>
+    <h2>Keep the machines you have. Add the intelligence.</h2>
+    <div class="big">
+      <div><b>Retrofit, don’t replace</b><span>Sensors and gateways bring older machines with no digital output into monitoring.</span></div>
+      <div><b>Speaks plant protocols</b><span>Modbus, OPC-UA and MQTT, over wired or LTE links.</span></div>
+      <div><b>Proved before it reaches site</b><span>Designs are tested on jigs first, so the line isn’t the test bench.</span></div>
+    </div>
+  </div>
+  <div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>13 / 19</span></div>
+</div></section></div>
+
+<!-- 13 WHO -->
+<div class="frame"><section class="slide s13"><div class="pad">
+  <h2>Built for mid-size manufacturers, one plant or many.</h2>
+  <div class="grid">
+    <ul class="rows">
+      <li><b>Pharma &amp; chemicals</b><span>IoT retrofit, asset management and gate control for brownfield process plants</span></li>
+      <li><b>Engineering &amp; equipment</b><span>Assets, visitor and vehicle control across locations, custom monitoring</span></li>
+      <li><b>HVAC &amp; building products</b><span>Asset management, controller testing and communication engineering</span></li>
+      <li><b>Logistics &amp; freight</b><span>FreightBid for shippers and their transporters</span></li>
+      <li><b>Any other sector</b><span>Custom IoT and embedded work built around the process</span></li>
+    </ul>
+    <div>
+      <p class="mono p" style="margin-bottom:18px">Who uses it inside the plant</p>
+      <ul class="feat roles">
+        <li>Plant heads and operations managers</li>
+        <li>Maintenance heads</li>
+        <li>Admin, HR and security heads</li>
+        <li>Logistics and supply chain heads</li>
+        <li>Senior management</li>
+      </ul>
+    </div>
+  </div>
+  </div><div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>14 / 19</span></div>
+</section></div>
+
+<!-- 14 PROOF -->
+<div class="frame"><section class="slide s14"><div class="pad">
+  <h2>What’s running today, and what’s next.</h2>
+  <div class="grid">
+    <ul class="status">
+      <li><b>Asset Management</b><span class="badge live">Live in production</span></li>
+      <li><b>Visitor &amp; Vehicle (VEMS)</b><span class="badge live">Deployed</span></li>
+      <li><b>FreightBid</b><span class="badge live">Deployed</span></li>
+      <li><b>Custom IoT &amp; embedded</b><span class="badge live">Delivered to brief</span></li>
+      <li><b>IoT Monitoring</b><span class="badge pilot">In client projects</span></li>
+      <li><b>Factory Surveillance</b><span class="badge pilot">In UAT</span></li>
+      <li><b>Energy Monitoring</b><span class="badge pilot">In UAT</span></li>
+      <li><b>Material Management</b><span class="badge road">Roadmap</span></li>
+    </ul>
+    <div>
+      <div class="cred"><span class="mono">Backed by industry</span><p><b>SETL (Standard Engineering Technology Limited)</b>, a mainboard-listed pharma equipment manufacturer, is a promoting shareholder. It keeps the product close to shop-floor reality.</p></div>
+      <div class="cred"><span class="mono">On stage</span><p><b>Bridging Legacy and Digital: An IoT Roadmap for Brownfield Process Plants</b>, 8th Annual OPEX &amp; Manufacturing Excellence in Chemicals Summit 2026.</p></div>
+      <p class="muted" style="font-size:22px">Also in the portfolio: AttendEase (workforce attendance) and ProcureIQ (requisition to purchase order, in development).</p>
+    </div>
+  </div>
+  </div><div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>15 / 19</span></div>
+</section></div>
+
+<!-- 15 WHY -->
+<div class="frame"><section class="slide purple s15"><div class="pad">
+  <h2>Why plants choose PlantiqX.</h2>
+  <div class="why">
+    <div><span class="n">01</span><b>Built for mid-size Indian plants</b><p>Designed for how Indian plants actually run, not a global platform adapted later.</p></div>
+    <div><span class="n">02</span><b>One platform, not a patchwork</b><p>Assets, gate, energy, security and freight under a single login.</p></div>
+    <div><span class="n">03</span><b>Built around your real problem</b><p>Custom IoT and embedded work is part of the offer, not an add-on.</p></div>
+    <div><span class="n">04</span><b>Brownfield first</b><p>Works with the machines you already have. Going digital doesn’t mean new equipment.</p></div>
+    <div><span class="n">05</span><b>Engineering-led</b><p>Enterprise data engineering and industrial protocol experience, not a dashboard wrapper.</p></div>
+    <div><span class="n">06</span><b>Running in production</b><p>Asset Management, VEMS and FreightBid are live across client locations.</p></div>
+  </div>
+  </div><div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>16 / 19</span></div>
+</section></div>
+
+<!-- 16 TEAM -->
+<div class="frame"><section class="slide s16"><div class="pad">
+  <h2 style="font-size:68px">Built by people who have run plants and built data systems.</h2>
+  <div class="grid">
+    <div><h3>Krishna Kanth Kudaravalli</h3><span class="mono">Founder</span>
+      <p>A decade of manufacturing experience, gained by working in every department of a company, from the shop floor to the back office. That close view of how a plant really runs is why PlantiqX is built around the whole plant, not a single function.</p></div>
+    <div><h3>Srikanth Kudaravalli</h3><span class="mono">Co-Founder</span>
+      <p>Over a decade of enterprise data engineering across Splunk and BI pipeline architecture, built in the US and brought home. Working across SETL’s departments, he saw plants run on disconnected systems. He leads end-to-end operations.</p></div>
+  </div>
+  </div><img class="band" src="../img/04-pharma-plant.jpg" alt=""><div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>17 / 19</span></div>
+</section></div>
+
+<!-- 17 HOW WE START -->
+<div class="frame"><section class="slide s17"><div class="pad">
+  <h2>How we start with your plant.</h2>
+  <div class="steps">
+    <div><span class="n">01</span><b>Understand</b><p>A short questionnaire, then a study of your site, process and wiring.</p></div>
+    <div><span class="n">02</span><b>Design</b><p>Architecture, bill of materials and a clear cost summary.</p></div>
+    <div><span class="n">03</span><b>Build &amp; test</b><p>Proved on test jigs before anything reaches your floor.</p></div>
+    <div><span class="n">04</span><b>Deploy &amp; refine</b><p>Go live, monitor, and improve with your team.</p></div>
+  </div>
+  <div class="start"><p>Start with one problem: a gate, a furnace, a line.</p><span class="cta">Book a plant walk-through</span></div>
+  </div><div class="foot"><span class="wm"><img class="wm-c" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><img class="wm-w" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX"></span><span>18 / 19</span></div>
+</section></div>
+
+<!-- 18 CLOSE -->
+<div class="frame"><section class="slide dark s18">
+  <img class="ph full" src="../img/00-hero-floor.jpg" alt="" style="object-position:50% 60%">
+  <div class="shade-l"></div><div class="shade-b"></div>
+  <div class="txt">
+    <img src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX" style="height:72px;display:block;margin-bottom:60px">
+    <h1>Let’s walk<br>your plant.</h1>
+    <p class="lead">Where Minds and Machines Merge</p>
+  </div>
+  <div class="contact">
+    <div><span class="mono">Web</span><p>plantiqx.com</p></div>
+    <div><span class="mono">Email</span><p>info@plantiqx.com</p></div>
+    <div><span class="mono">Phone</span><p>+91 63022 88170</p></div>
+    <div><span class="mono">LinkedIn · Instagram</span><p>/company/plantiqx · @plantiqx.ai</p></div>
+  </div>
+</section></div>
+
+<div class="hint">← → to move · F for full screen</div>
+<script>
+function fit(){var w=document.documentElement.clientWidth;var s=Math.min(1,(w-(w>900?48:16))/1920);if(window.matchMedia('print').matches)s=1;document.documentElement.style.setProperty('--s',s)}
+fit();addEventListener('resize',fit);
+var frames=[...document.querySelectorAll('.frame')];
+function cur(){var y=scrollY+innerHeight/3;var i=0;frames.forEach((f,k)=>{if(f.offsetTop<=y)i=k});return i}
+addEventListener('keydown',e=>{var i=cur();
+ if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();(frames[i+1]||frames[i]).scrollIntoView({behavior:'smooth',block:'center'})}
+ if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();(frames[i-1]||frames[i]).scrollIntoView({behavior:'smooth',block:'center'})}
+ if(e.key==='f'||e.key==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}});
+</script>
+</body></html>

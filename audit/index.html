@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PlantiqX Website Audit</title>
+<link rel="stylesheet" href="../brand/tokens.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px)) 80px}
+header.cover{background:var(--night);color:#fff}
+header.cover .wrap{padding-top:56px;padding-bottom:56px}
+.logo{height:40px;display:block;margin-bottom:56px}
+h1{font-family:var(--f-head);font-weight:600;font-size:clamp(38px,6vw,68px);letter-spacing:-0.035em;line-height:1.02;max-width:16ch;text-wrap:balance}
+.sub{color:#c9c6d1;font-size:19px;max-width:60ch;margin-top:20px}
+.meta{font-family:var(--f-mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#9c98a6;margin-top:36px}
+h2{font-family:var(--f-head);font-weight:600;font-size:clamp(28px,3.6vw,40px);letter-spacing:-0.03em;line-height:1.1;margin:72px 0 22px;color:var(--purple);text-wrap:balance}
+h3{font-family:var(--f-head);font-weight:600;font-size:21px;letter-spacing:-0.015em;line-height:1.25}
+p{max-width:68ch}
+.lede{font-size:20px;color:#3b3942;max-width:62ch}
+.verdict{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--line);border:1px solid var(--line);margin-top:28px}
+.verdict div{background:#fff;padding:22px 22px 24px}
+.verdict .mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel)}
+.verdict b{display:block;font-family:var(--f-head);font-size:26px;letter-spacing:-0.02em;margin:8px 0 6px}
+.verdict p{font-size:15px;color:#3b3942}
+.ok{color:var(--ok)}.warn{color:var(--uat)}.bad{color:#C2331F}
+figure{margin:24px 0 0}
+figure img{width:100%;display:block;border:1px solid var(--line)}
+figcaption{font-family:var(--f-mono);font-size:12.5px;color:var(--steel);margin-top:8px;letter-spacing:.02em}
+.figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.list{list-style:none;border-top:1.5px solid var(--ink)}
+.list li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;padding:16px 0;border-bottom:1px solid var(--line)}
+.list li p{font-size:16px;color:#3b3942}
+.tbl{overflow-x:auto;margin-top:8px}
+table{width:100%;border-collapse:collapse;min-width:760px;font-size:15.5px}
+th{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:left;color:var(--steel);padding:10px 12px;border-bottom:1.5px solid var(--ink)}
+td{padding:16px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{font-family:var(--f-mono);font-size:13px;color:var(--purple);width:44px}
+td b{font-family:var(--f-head);font-size:17px;letter-spacing:-0.01em;display:block;margin-bottom:4px}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border:1.3px solid currentColor;border-radius:3px;white-space:nowrap}
+.say{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--line);border:1px solid var(--line)}
+.say div{background:#fff;padding:16px 18px;font-size:16px}
+.say .h{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:var(--paper)}
+.say .no{color:#6b6875;text-decoration:line-through;text-decoration-color:#c9c6d1}
+.checks{list-style:none;display:grid;gap:10px;margin-top:6px}
+.checks li{padding-left:30px;position:relative}
+.checks li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border:1.5px solid var(--purple);border-radius:3px}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.note{margin-top:28px;padding:18px 20px;border-left:4px solid var(--orange);background:#fff;font-size:15.5px;color:#3b3942}
+footer{border-top:1px solid var(--line);margin-top:72px;padding-top:20px;font-family:var(--f-mono);font-size:12.5px;color:var(--steel)}
+@media (max-width:760px){.verdict,.figs,.cols,.say{grid-template-columns:minmax(0,1fr)}.list li{grid-template-columns:minmax(0,1fr);gap:6px}}
+@media print{@page{size:A4;margin:14mm}body{font-size:14px}header.cover .wrap{padding:30px}h2{margin-top:36px;break-after:avoid}table,figure,.verdict,.say{break-inside:avoid}}
+</style></head>
+<body>
+<header class="cover"><div class="wrap">
+  <img class="logo" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX">
+  <h1>Website &amp; online presence audit</h1>
+  <p class="sub">What plantiqx.com and freightbid.plantiqx.com say to a plant head today, what gets in the way of new clients, and what to fix first.</p>
+  <p class="meta">Prepared by Busy Fox · 18 November 2026 · Checked live on desktop</p>
+</div></header>
+
+<main class="wrap">
+  <h2>In one minute</h2>
+  <p class="lede">The site has the right promise and a strong product list, but it reads like a template, claims more than the company’s own profile, and hides the proof that would win a mid-size plant. Shared links show up bare on LinkedIn and WhatsApp, which matters because those are the channels the social plan depends on.</p>
+  <div class="verdict">
+    <div><span class="mono">Positioning</span><b class="warn">Right idea, weak proof</b><p>“One platform” is there. SETL, the founders, live clients and the furnace project are not.</p></div>
+    <div><span class="mono">Shareability &amp; search</span><b class="bad">Fix first</b><p>No meta description or link-preview tags. robots.txt and sitemap.xml serve the homepage.</p></div>
+    <div><span class="mono">Consistency</span><b class="bad">Mixed signals</b><p>Two spellings of the name, two email domains, product names that differ from the profile.</p></div>
+  </div>
+
+  <div class="figs">
+    <figure><img src="site-hero.jpg" alt="plantiqx.com homepage hero: logo and tagline on a purple network-dots background"><figcaption>plantiqx.com hero, 1440 px wide. A network-dots backdrop with no plant, product or proof above the fold.</figcaption></figure>
+    <figure><img src="fb-hero.jpg" alt="freightbid.plantiqx.com landing page"><figcaption>freightbid.plantiqx.com. A polished product site, but with no PlantiqX branding or link back.</figcaption></figure>
+  </div>
+
+  <h2>What already works</h2>
+  <ul class="list">
+    <li><h3>A clear tagline and logo</h3><p>“Where Minds and Machines Merge” and the wordmark (the slashed “a” echoes the X) give a recognisable identity to build on.</p></li>
+    <li><h3>A demo button that’s always visible</h3><p>“Request For Demo” sits in the header and repeats through the page.</p></li>
+    <li><h3>An FAQ that answers buyer questions</h3><p>Integration with ERP and SCADA, security, 1–4 week rollouts, multi-plant use. These are the questions a plant head asks.</p></li>
+    <li><h3>Analytics and an assistant</h3><p>Google Analytics 4 is installed and an “IQX Assistant” chat greets visitors, so the plumbing for tracking leads exists.</p></li>
+    <li><h3>FreightBid stands on its own</h3><p>Separate shipper and driver sign-ups, reverse-auction bidding, e-KYC, GPS tracking and proof of delivery are explained clearly.</p></li>
+    <li><h3>Social links in the footer</h3><p>LinkedIn and Instagram (@plantiqx.ai) are linked, ready for the social plan to feed.</p></li>
+  </ul>
+
+  <h2>Fix first, in this order</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>#</th><th>What we found</th><th>Why it costs clients</th><th>Fix</th><th>Effort</th></tr></thead>
+    <tbody>
+      <tr><td>01</td><td><b>No link previews</b>The homepage head has only a title: no meta description, no Open Graph or Twitter tags.</td><td>Every post or WhatsApp share of plantiqx.com shows a bare URL with no image or line of text. That kills click-through on the plan’s main channels.</td><td>Add a description, og:title, og:description and a 1200×630 og:image per page (we can supply them from the brand kit).</td><td><span class="pill ok">Hours</span></td></tr>
+      <tr><td>02</td><td><b>Invisible to search</b>The site is a single-page app: every URL returns the same empty shell, and robots.txt and sitemap.xml return the homepage HTML.</td><td>Google sees one thin page instead of 16 product pages, so “visitor management system Hyderabad” or “energy monitoring for factories” never finds PlantiqX.</td><td>Serve a real robots.txt and sitemap.xml; pre-render each product page with its own title and description.</td><td><span class="pill warn">1–3 days</span></td></tr>
+      <tr><td>03</td><td><b>Draft notes left live</b>Headings such as “Implications for PlantIQX Positioning” and “Trusted by Those Who Know the Industry — case studies, client testimonials… back every claim” sit on the homepage.</td><td>They read as internal strategy notes. “Real Numbers. Proven Impact.” then shows no numbers, which undercuts trust.</td><td>Replace with real proof: VEMS live across all locations at two manufacturing clients, the furnace monitoring project, FreightBid live. Remove anything with no proof behind it yet.</td><td><span class="pill ok">Hours</span></td></tr>
+      <tr><td>04</td><td><b>Claims ahead of status</b>Surveillance is described as monitoring “24/7… in real time”. Predictive Maintenance, Vision AI, Condition Monitoring and Quality Automation are listed as products.</td><td>The company profile says Surveillance and Energy are in user acceptance testing. A plant head who books a demo and finds a gap stops trusting the rest.</td><td>Tag each module Live, Piloting or Coming soon, exactly as the profile does. Honest status is itself a trust signal.</td><td><span class="pill ok">Hours</span></td></tr>
+      <tr><td>05</td><td><b>Mixed names and contacts</b>“PlantIQX” on the site vs “PlantiqX” in the brand rules. info@plantiqx.in on the site vs info@plantiqx.com in the profile (plantiqx.in itself returns 502 Bad Gateway). ProcureX vs ProcureIQ. Utilities Monitoring vs Energy Monitoring.</td><td>Inconsistent names look like two companies. A lead emailing the wrong domain may never get an answer.</td><td>One naming sheet (in the brand kit), applied everywhere. Confirm info@plantiqx.in receives mail, or switch the site to info@plantiqx.com.</td><td><span class="pill ok">Hours</span></td></tr>
+      <tr><td>06</td><td><b>The best trust signals are missing</b>No SETL backing, no founders, no client logos or case stories, no OPEX Chemicals Summit talk.</td><td>For a mid-size plant buying from a young company, “who is behind this” and “who already uses it” matter more than any feature.</td><td>Add a “Backed by SETL” line, a founders section and one case story per live module, with client permission.</td><td><span class="pill warn">1 week</span></td></tr>
+      <tr><td>07</td><td><b>Generic copy</b>“Revolutionizing”, “seamlessly”, “empower”, “360° view”, “self-optimizing ecosystems”.</td><td>The company’s own brand rule says plant-floor language and real use cases, never generic SaaS. Buyers skim past this wording.</td><td>Rewrite the hero and module intros in the voice from the brand kit (examples below).</td><td><span class="pill warn">2–3 days</span></td></tr>
+      <tr><td>08</td><td><b>A hero with no plant in it</b>A purple network-dots backdrop, logo and tagline fill the first screen.</td><td>It says “tech startup”, not “we understand your plant”. Nothing shows the product or a result.</td><td>Use a real plant photo or a dashboard view, a one-line promise, and a proof strip (live modules, SETL, clients).</td><td><span class="pill warn">With a refresh</span></td></tr>
+      <tr><td>09</td><td><b>FreightBid sits apart</b>freightbid.plantiqx.com carries no PlantiqX branding or link back.</td><td>FreightBid users never discover the rest of the platform, which is a lost cross-sell.</td><td>Add “by PlantiqX” in the header and footer, with a link to plantiqx.com.</td><td><span class="pill ok">Hours</span></td></tr>
+      <tr><td>10</td><td><b>Small things</b>Footer says © 2025. The site font is Plus Jakarta Sans while the brand rule names Space Grotesk and IBM Plex.</td><td>Small, but these are the details a careful buyer notices.</td><td>Update the year; align fonts with the brand kit when the site is refreshed.</td><td><span class="pill ok">Minutes</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Copy: say this, not this</h2>
+  <div class="say">
+    <div class="h">On the site today</div><div class="h">Plant-floor version</div>
+    <div class="no">PlantIQX is revolutionizing industrial operations with smart automation.</div><div>One login for your machines, gate, cameras, energy and freight.</div>
+    <div class="no">AI-powered video intelligence that monitors your facility 24/7.</div><div>Cameras that flag a missing helmet or an after-hours entry while the shift is still on. Now piloting.</div>
+    <div class="no">A 360° view into your operations.</div><div>See which machine stopped, where, and for how long, across every plant.</div>
+    <div class="no">Integrates seamlessly with existing equipment.</div><div>Works with the machines you already have: Modbus, OPC-UA and MQTT, wired or LTE.</div>
+  </div>
+
+  <h2>Quick wins this week</h2>
+  <div class="cols">
+    <ul class="checks">
+      <li>Add meta description and link-preview tags to every page</li>
+      <li>Remove the internal-note headings and the empty “Real Numbers” block</li>
+      <li>Tag every module Live, Piloting or Coming soon</li>
+      <li>Fix the email and pick one spelling: PlantiqX</li>
+    </ul>
+    <ul class="checks">
+      <li>Add “Backed by SETL” and the two founders</li>
+      <li>Add “by PlantiqX” to FreightBid</li>
+      <li>Serve real robots.txt and sitemap.xml files</li>
+      <li>Set up a YouTube channel for demo clips (none is linked today)</li>
+    </ul>
+  </div>
+  <p class="note">Not checked tonight: LinkedIn and Instagram follower counts and post history (both need a login), page-speed lab scores, and how the site renders on phones. We will cover these in the first-week review.</p>
+
+  <footer>PlantiqX website audit · Busy Fox for PlantiqX · Sources: www.plantiqx.com, freightbid.plantiqx.com and the PlantiqX Company Profile (Nov 2026), checked 18 Nov 2026</footer>
+</main>
+</body></html>

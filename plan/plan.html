@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlantiqX Social Media Plan</title>
+<meta name="description" content="PlantiqX Social Media Marketing Plan, 90 days. Prepared by Busy Fox, November 2026.">
+<link rel="stylesheet" href="../brand/tokens.css">
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html{background:#E6E3DC}
+body{margin:0;font-family:var(--f-body);color:var(--ink);font-size:9.3pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-kerning:normal;text-rendering:optimizeLegibility}
+p{margin:0 0 2.6mm}
+ul,ol{margin:0;padding:0;list-style:none}
+strong{font-weight:600}
+
+/* ---------- page frame ---------- */
+.page{width:210mm;height:297mm;margin:12mm auto;background:var(--paper);position:relative;overflow:hidden;display:flex;flex-direction:column;padding:12mm 17mm 10mm;box-shadow:0 1px 2px rgba(23,22,27,.08),0 8px 22px rgba(23,22,27,.06)}
+@media print{html{background:none}.page{margin:0;box-shadow:none;break-after:page;page-break-after:always}}
+.run{display:flex;justify-content:space-between;align-items:center;font-family:var(--f-mono);font-size:6.8pt;color:var(--steel);letter-spacing:.05em;text-transform:uppercase;padding-bottom:3mm;border-bottom:.6pt solid var(--line);margin-bottom:8mm}
+.logo-run{display:block;height:4.6mm;width:auto}
+.content{flex:1;min-height:0;overflow:hidden}
+.foot{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:6.8pt;color:var(--steel);letter-spacing:.04em;padding-top:2.6mm;border-top:.6pt solid var(--line);margin-top:5mm}
+.foot .pn{color:var(--ink)}
+
+/* ---------- wordmark ---------- */
+.pqx-logo{display:inline-flex;align-items:center;font-family:var(--f-head);font-weight:700;color:var(--purple);letter-spacing:-.035em;line-height:1}
+.pqx-logo img{height:.76em;margin-left:.07em;transform:translateY(-.015em)}
+.pqx-logo.on-dark{color:#fff}
+
+/* ---------- type ---------- */
+.sh{margin-bottom:6.5mm}
+.num{font-family:var(--f-mono);font-weight:500;font-size:8.2pt;color:var(--orange);letter-spacing:.1em;margin-bottom:2.2mm}
+h2{font-family:var(--f-head);font-weight:600;font-size:24pt;line-height:1.06;letter-spacing:-.022em;color:var(--purple);margin:0 0 3.6mm}
+.lede{font-size:11pt;line-height:1.48;max-width:152mm;margin:0}
+h3{font-family:var(--f-head);font-weight:600;font-size:11.5pt;letter-spacing:-.01em;color:var(--ink);margin:0 0 2.4mm}
+.lab{font-family:var(--f-mono);font-weight:500;font-size:6.8pt;text-transform:uppercase;letter-spacing:.08em;color:var(--steel)}
+.small{font-size:8pt;line-height:1.45;color:var(--steel)}
+.note{font-size:8pt;line-height:1.45;color:var(--steel);margin-top:3mm}
+.gap{height:6mm}
+.gap-s{height:3.5mm}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:8mm}
+.cols3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6mm}
+.rule-note{border-left:2pt solid var(--orange);padding:.6mm 0 .6mm 4mm;font-family:var(--f-head);font-weight:500;font-size:11pt;line-height:1.38;letter-spacing:-.005em}
+.dash li{position:relative;padding-left:4mm;margin-bottom:1.5mm}
+.dash li::before{content:"";position:absolute;left:0;top:.62em;width:2mm;height:.7pt;background:var(--ink)}
+
+/* ---------- tables ---------- */
+table{width:100%;border-collapse:collapse;font-size:8.5pt;line-height:1.42}
+th{font-family:var(--f-mono);font-weight:500;font-size:6.6pt;text-transform:uppercase;letter-spacing:.07em;color:var(--steel);text-align:left;padding:0 3mm 1.8mm 0;border-bottom:.9pt solid var(--ink);vertical-align:bottom}
+td{padding:2.2mm 3mm 2.2mm 0;border-bottom:.5pt solid #D6D2C8;vertical-align:top}
+th:last-child,td:last-child{padding-right:0}
+td.k{font-family:var(--f-head);font-weight:600;font-size:9pt;letter-spacing:-.005em}
+td.q{font-style:italic}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr.wk td{border-bottom:.9pt solid var(--ink);padding:4mm 0 1.6mm;font-family:var(--f-head);font-weight:600;font-size:9.6pt;color:var(--purple)}
+tr.wk td span{font-family:var(--f-body);font-weight:400;font-size:8.2pt;color:var(--steel);margin-left:2mm}
+tr.wk:first-child td{padding-top:0}
+.st{font-family:var(--f-mono);font-weight:500;font-size:6.6pt;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.st::before{content:"";display:inline-block;width:1.6mm;height:1.6mm;margin-right:1.4mm;vertical-align:.1mm;background:currentColor}
+.st.live{color:var(--ok)}.st.uat{color:var(--uat)}.st.road{color:var(--steel)}
+.tag{font-family:var(--f-mono);font-size:6.8pt;letter-spacing:.04em;color:var(--steel);text-transform:uppercase}
+
+/* ---------- cover ---------- */
+.cover{background:var(--night);color:#fff;padding:18mm 18mm 15mm}
+.cover .content{display:flex;flex-direction:column;overflow:visible}
+.cover .top{display:flex;justify-content:space-between;align-items:flex-start}
+.cover .logo-cover{display:block;height:15mm;width:auto;margin-left:-1.2mm}
+.fixbox{border:.6pt solid #CFCAC0;border-top:2pt solid var(--orange);padding:3.6mm 5mm 3mm;background:#FBFAF6}
+.fixbox .hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1.6mm}
+.fixbox .hd h3{margin:0}
+.cover .tagline{font-family:var(--f-mono);font-size:7.2pt;letter-spacing:.1em;text-transform:uppercase;color:#A9A5B3;margin-top:4mm}
+.cover .date{font-family:var(--f-mono);font-size:7.2pt;letter-spacing:.1em;text-transform:uppercase;color:#A9A5B3;text-align:right;line-height:1.7}
+.cover .mid{margin-top:auto}
+.cover .over{font-family:var(--f-mono);font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:6mm}
+.cover h1{font-family:var(--f-head);font-weight:600;font-size:50pt;line-height:.98;letter-spacing:-.03em;margin:0 0 7mm;color:#fff}
+.cover .sub{font-size:13pt;line-height:1.45;color:#D9D6E0;max-width:135mm;margin:0}
+.cover .tl{display:grid;grid-template-columns:1fr 1fr 1fr;margin-top:24mm}
+.cover .tl div{border-top:1pt solid #4A4654;padding-top:3.4mm;padding-right:6mm}
+.cover .tl div:first-child{border-top:2pt solid var(--orange);padding-top:3mm}
+.cover .tl b{display:block;font-family:var(--f-mono);font-weight:500;font-size:7pt;letter-spacing:.1em;text-transform:uppercase;color:#A9A5B3;margin-bottom:1.5mm}
+.cover .tl span{font-family:var(--f-head);font-weight:600;font-size:13pt;letter-spacing:-.01em}
+.cover .tl em{display:block;font-style:normal;font-size:8.4pt;color:#A9A5B3;margin-top:1mm;line-height:1.4}
+.cover .bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:16mm;padding-top:4mm;border-top:.6pt solid #2E2B36;font-family:var(--f-mono);font-size:7.2pt;letter-spacing:.08em;text-transform:uppercase;color:#A9A5B3}
+.cover .bottom strong{color:#fff;font-weight:500}
+
+/* ---------- contents ---------- */
+.toc li{display:grid;grid-template-columns:9mm 1fr 8mm;align-items:baseline;padding:2.05mm 0;border-bottom:.5pt solid #D6D2C8;font-family:var(--f-head);font-size:10pt;font-weight:500;letter-spacing:-.005em}
+.toc li .i{font-family:var(--f-mono);font-size:7.4pt;color:var(--orange);font-weight:500}
+.toc li .p{font-family:var(--f-mono);font-size:7.4pt;color:var(--steel);text-align:right}
+.brief li{display:grid;grid-template-columns:30mm 1fr;gap:4mm;padding:3mm 0;border-bottom:.5pt solid #D6D2C8}
+.brief li:first-child{border-top:.9pt solid var(--ink)}
+.brief li b{font-family:var(--f-mono);font-weight:500;font-size:6.8pt;letter-spacing:.07em;text-transform:uppercase;color:var(--steel);padding-top:.6mm}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(6,1fr);column-gap:4mm;row-gap:5mm}
+.stats.three{grid-template-columns:repeat(3,1fr);column-gap:7mm}
+.stats.three b{font-size:22pt}.stats.three span{font-size:8.3pt}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}
+.facts div{border-top:.9pt solid var(--ink);padding-top:2.4mm;font-size:8.2pt;line-height:1.42}
+.facts b{display:block;font-family:var(--f-head);font-weight:600;font-size:20pt;letter-spacing:-.02em;color:var(--purple);line-height:1.05;margin-bottom:1.2mm}
+.facts .src{display:block;margin-top:1.6mm;font-family:var(--f-mono);font-size:6.5pt;letter-spacing:.03em;color:var(--steel)}
+a{color:inherit;text-decoration:underline;text-decoration-color:#B9B4C4;text-underline-offset:1.5px;text-decoration-thickness:.5pt}
+.stats div{border-top:.9pt solid var(--ink);padding-top:2.4mm}
+.stats b{display:block;font-family:var(--f-head);font-weight:600;font-size:17pt;letter-spacing:-.02em;color:var(--purple);line-height:1.05}
+.stats span{display:block;font-size:7.6pt;line-height:1.38;margin-top:1mm}
+
+/* ---------- roadmap ---------- */
+.road{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6mm}
+.road .m{border-top:2pt solid var(--purple);padding-top:3mm}
+.road .m:nth-child(2){border-top-color:#8C6BE8}
+.road .m:nth-child(3){border-top-color:var(--orange)}
+.road h3{margin-bottom:.8mm;font-size:12pt}
+.road .when{font-family:var(--f-mono);font-size:6.8pt;letter-spacing:.06em;text-transform:uppercase;color:var(--steel);margin-bottom:3mm}
+.road .goal{font-size:8.6pt;font-weight:600;margin-bottom:3mm;line-height:1.4}
+.road ul{font-size:8.3pt;line-height:1.42}
+.road .dash li{margin-bottom:1.9mm}
+.road .by{margin-top:3.5mm;padding-top:2.4mm;border-top:.5pt solid #D6D2C8;font-size:8.1pt;line-height:1.42}
+.road .by b{display:block;font-family:var(--f-mono);font-weight:500;font-size:6.6pt;letter-spacing:.07em;text-transform:uppercase;color:var(--steel);margin-bottom:1mm}
+
+/* ---------- funnel ---------- */
+.flow{display:grid;grid-template-columns:repeat(7,1fr);gap:2.6mm}
+.flow div{border-top:2pt solid var(--purple);padding-top:2.4mm;font-size:7.8pt;line-height:1.38}
+.flow div:last-child{border-top-color:var(--orange)}
+.flow i{display:block;font-style:normal;font-family:var(--f-mono);font-size:6.8pt;color:var(--steel);letter-spacing:.06em;margin-bottom:1mm}
+.flow b{display:block;font-family:var(--f-head);font-weight:600;font-size:9.4pt;letter-spacing:-.005em;margin-bottom:1.2mm;line-height:1.15}
+.seq li{display:grid;grid-template-columns:13mm 1fr;padding:1.7mm 0;border-bottom:.5pt solid #D6D2C8;font-size:8.3pt;line-height:1.4}
+.seq li b{font-family:var(--f-mono);font-weight:500;font-size:7pt;color:var(--purple);padding-top:.3mm}
+.blk{font-size:8.4pt;line-height:1.45}
+.blk h3{font-size:10.5pt}
+
+/* ---------- next steps ---------- */
+.steps li{display:grid;grid-template-columns:10mm 34mm 1fr;padding:2.5mm 0;border-bottom:.5pt solid #D6D2C8;font-size:8.8pt;line-height:1.42}
+.steps li i{font-style:normal;font-family:var(--f-mono);font-size:7.4pt;color:var(--orange);padding-top:.4mm}
+.steps li b{font-family:var(--f-head);font-weight:600;font-size:9.2pt}
+.need{counter-reset:n;columns:2;column-gap:8mm;font-size:8.3pt;line-height:1.42}
+.need li{break-inside:avoid;position:relative;padding-left:6mm;margin-bottom:2.2mm;counter-increment:n}
+.need li::before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:.2mm;font-family:var(--f-mono);font-size:6.8pt;color:var(--purple)}
+
+/* ---------- screen, narrow ---------- */
+@media screen and (max-width:840px){
+  html{background:var(--paper)}
+  .page{width:auto;height:auto;margin:0;box-shadow:none;padding:28px 16px;border-bottom:1px solid var(--line)}
+  .cover{min-height:100vh}
+  .content{overflow:visible}
+  .cols2,.cols3,.road,.stats{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .tw{overflow-x:auto}
+  .tw table{min-width:640px}
+  .need{columns:1}
+  .cover h1{font-size:40px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 1 · COVER ============ -->
+<section class="page cover">
+  <div class="content">
+    <div class="top">
+      <div>
+        <img class="logo-cover" src="../brand/original/plantiqx-logo-white.png" alt="PlantiqX">
+        <div class="tagline">Where Minds and Machines Merge</div>
+      </div>
+      <div class="date">November 2026<br>For discussion · 18 Nov, 8:00 pm</div>
+    </div>
+    <div class="mid">
+      <div class="over">90-day plan · Visibility and new clients</div>
+      <h1>Social Media<br>Marketing Plan</h1>
+      <p class="sub">How PlantiqX becomes a name plant heads already know, and how that attention turns into demos and site visits.</p>
+      <div class="tl">
+        <div><b>Month 1 · December</b><span>Foundation</span><em>Profiles, brand kit, founder voice, first posts</em></div>
+        <div><b>Month 2 · January</b><span>Proof</span><em>Case stories, demo film, the OPEX summit</em></div>
+        <div><b>Month 3 · February</b><span>Demand</span><em>Plant Data Audit, webinar, paid and outbound</em></div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div>Prepared by <strong>Busy Fox</strong> for PlantiqX</div>
+      <div>Confidential</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · CONTENTS + BRIEF ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>Social Media Marketing Plan</div></div>
+  <div class="content">
+    <div class="sh">
+      <div class="num">THE PLAN ON ONE PAGE</div>
+      <h2>Show what’s live.<br>Talk like the plant floor.</h2>
+      <p class="lede">PlantiqX already has products running at client sites. Most plant heads in its target states have never heard the name. This plan fixes that over 90 days, with LinkedIn and the two founders at the centre.</p>
+    </div>
+    <div class="cols2" style="grid-template-columns:1.15fr .85fr;gap:10mm">
+      <ul class="brief">
+        <li><b>The problem</b><div>Real deployments and a listed shareholder, but almost no public proof of either. A buyer who searches PlantiqX today finds very little.</div></li>
+        <li><b>The goal</b><div>Become a familiar name to plant, maintenance, admin and logistics heads in Telangana, Andhra Pradesh, Maharashtra and Gujarat, and turn that into qualified demos and site visits.</div></li>
+        <li><b>The approach</b><div>LinkedIn first, led by Krishna Kanth and Srikanth. Every post rests on something live and provable. One free offer, the Plant Data Audit, turns interest into a conversation.</div></li>
+        <li><b>The rhythm</b><div>About ten pieces a week across LinkedIn, Instagram, YouTube and Google. WhatsApp is for follow-up, never for blasts.</div></li>
+        <li><b>The money</b><div>Organic in Month 1. A small paid budget from Month 2, scaled in Month 3 only if the cost per lead holds.</div></li>
+        <li><b>Tonight</b><div>Agree the targets, pick a paid tier and share access, so Month 1 starts on Monday 30 November.</div></li>
+      </ul>
+      <div>
+        <div class="lab" style="margin-bottom:2mm">Contents</div>
+        <ol class="toc">
+          <li><span class="i">01</span>Where PlantiqX stands, and competitors<span class="p" data-toc="s01"></span></li>
+          <li><span class="i">02</span>Goal and targets<span class="p" data-toc="s02"></span></li>
+          <li><span class="i">03</span>Who we talk to<span class="p" data-toc="s03"></span></li>
+          <li><span class="i">04</span>Positioning and pillars<span class="p" data-toc="s04"></span></li>
+          <li><span class="i">05</span>Channel plan<span class="p" data-toc="s05"></span></li>
+          <li><span class="i">06</span>Content and ten posts<span class="p" data-toc="s06"></span></li>
+          <li><span class="i">07</span>The 90-day roadmap<span class="p" data-toc="s07"></span></li>
+          <li><span class="i">08</span>Four-week calendar<span class="p" data-toc="s08"></span></li>
+          <li><span class="i">09</span>Lead engine<span class="p" data-toc="s09"></span></li>
+          <li><span class="i">10</span>Paid boost<span class="p" data-toc="s10"></span></li>
+          <li><span class="i">11</span>KPI dashboard<span class="p" data-toc="s11"></span></li>
+          <li><span class="i">12</span>Who does what<span class="p" data-toc="s12"></span></li>
+          <li><span class="i">13</span>Next steps<span class="p" data-toc="s13"></span></li>
+        </ol>
+        <p class="note">Source for every fact about PlantiqX: the PlantiqX Company Profile, November 2026. All numbers in this plan are targets or estimates, labelled as such.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 3 · 01 STANDING ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>01 · Where PlantiqX stands now</div></div>
+  <div class="content">
+    <div class="sh" id="s01">
+      <div class="num">01</div>
+      <h2>Where PlantiqX stands now</h2>
+      <p class="lede">PlantiqX has more to show than most companies its size: products live with clients, a deployed custom IoT project, and a listed manufacturer as a shareholder. What it lacks is an audience that knows any of this.</p>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col style="width:30%"><col style="width:27%"><col></colgroup>
+      <tr><th>What exists</th><th>Status (from the profile)</th><th>How we use it on social</th></tr>
+      <tr><td class="k">Asset Management</td><td><span class="st live">Live in production</span></td><td>Lead proof. Screen demos, downtime and maintenance-history posts.</td></tr>
+      <tr><td class="k">Visitor and Vehicle Management (VEMS)</td><td><span class="st live">Live</span><br>All locations at two manufacturing clients</td><td>Lead proof. Paper register vs VEMS; a case story if the clients agree.</td></tr>
+      <tr><td class="k">FreightBid</td><td><span class="st live">Live</span><br>freightbid.plantiqx.com</td><td>Lead proof for logistics heads. A walkthrough video.</td></tr>
+      <tr><td class="k">Furnace monitoring (custom IoT)</td><td><span class="st live">Deployed</span></td><td>Our best shop-floor clip: set value against present value, live.</td></tr>
+      <tr><td class="k">IoT Monitoring</td><td><span class="st uat">In projects</span><br>Being added to the platform</td><td>Talk about the projects. Say “being added to the platform”.</td></tr>
+      <tr><td class="k">Factory Surveillance · Energy Monitoring</td><td><span class="st uat">User acceptance testing</span></td><td>Problem-led posts, labelled “in testing”. No performance claims.</td></tr>
+      <tr><td class="k">Controller test jig · AttendEase</td><td><span class="st uat">Not yet live</span><br>In progress · ready to deploy</td><td>Behind-the-scenes engineering; AttendEase for HR heads later.</td></tr>
+      <tr><td class="k">Material Mgmt · ProcureIQ · generator control</td><td><span class="st road">Not live</span><br>Roadmap, in development or proposed</td><td>Mention only when asked. Never in ads.</td></tr>
+    </table></div>
+    <p class="note">Channels today: www.plantiqx.com, LinkedIn (linkedin.com/company/plantiqx), Instagram @plantiqx.ai, info@plantiqx.com, +91 6302288170. Follower counts, post history and website analytics are not yet audited; we record those baselines in week 1.</p>
+    <div class="rule-note" style="margin-top:4mm">The rule for every post: if it’s live, we show it. If it’s in testing, we say so. If it’s on the roadmap, it stays out of ads.</div>
+    <div class="gap-s"></div><div class="gap-s"></div>
+    <h3>The market around it</h3>
+    <div class="facts">
+      <div><b>23%</b>of Indian MSMEs use IoT, AI or analytics, though 67% are digitally equipped. 84% say unclear value holds them back.<span class="src"><a href="https://cmrindia.com/67-of-msmes-demonstrate-digital-readiness-across-core-and-advanced-technologies-finds-cmr-study/">CMR study, June 2025</a> · n = 400+</span></div>
+      <div><b>62%</b>of equipment-heavy firms keep machine data in several systems. About 59% have no structured maintenance history.<span class="src"><a href="https://themachinemaker.com/news/new-mit-smr-india-infinite-uptime-study-highlights-operational-gaps-slowing-industrial-ai-adoption/">MIT SMR India × Infinite Uptime, 2026</a></span></div>
+      <div><b>160M+</b>LinkedIn members in India, its second-largest market. Indian members uploaded 60% more video.<span class="src"><a href="https://www.storyboard18.com/brand-makers/linkedin-taps-indias-ai-savvy-workforce-as-membership-surges-past-160-million-80480.htm">Storyboard18, September 2025</a></span></div>
+    </div>
+    <p class="note" style="color:var(--ink)">What it means: buyers doubt IoT pays. We lead with proof of what is live, on LinkedIn, in video.</p>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 4 · 01 COMPETITORS ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>01 · Competitors and the gap</div></div>
+  <div class="content">
+    <div class="sh">
+      <div class="num">01 · CONTINUED</div>
+      <h2>Who else is selling to the plant</h2>
+      <p class="lede">Most competitors sell one module each, and the strongest sell to steel, cement and fertiliser majors. In our scan, nobody puts the gate, the machines, the cameras, the meters and the freight desk of a mid-size plant on one login.</p>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col style="width:20%"><col style="width:36%"><col></colgroup>
+      <tr><th>Module</th><th>Who PlantiqX meets</th><th>Where they aim</th></tr>
+      <tr><td class="k">Assets · IoT monitoring</td><td>Infinite Uptime, Nanoprecise, Altizon</td><td>Large process majors and multi-plant enterprises</td></tr>
+      <tr><td class="k">Gate</td><td>Veris, Vizitor, Happy Visitor</td><td>The visitor only; vehicle, material and camera links not seen</td></tr>
+      <tr><td class="k">Surveillance</td><td>Wobot.ai, Agrex.ai, Videonetics, Ripik.ai</td><td>Single-purpose video analytics; Ripik in steel and cement</td></tr>
+      <tr><td class="k">Energy</td><td>Faclon Labs, Elmeasure, Zenatix (Schneider)</td><td>Faclon is the closest mid-market rival; Elmeasure meters are more likely a partner</td></tr>
+      <tr><td class="k">Freight</td><td>Freight Tiger, SuperProcure, LoRRI</td><td>Large shippers and logistics providers</td></tr>
+    </table></div>
+    <div class="gap"></div>
+    <h3>What they do on social, and what we take from it</h3>
+    <div class="tw"><table>
+      <colgroup><col style="width:17%"><col style="width:38%"><col></colgroup>
+      <tr><th>Player</th><th>What we saw</th><th>What PlantiqX does with it</th></tr>
+      <tr><td class="k">Infinite Uptime</td><td>Co-branded research with MIT SMR India, the CEO on TV, analyst news, shared as posts</td><td>A short “mid-size plant pulse” from our LinkedIn polls in Month 3. Founders on camera.</td></tr>
+      <tr><td class="k">Nanoprecise</td><td>On-demand webinars behind a sign-up form</td><td>The summit talk becomes our first gated webinar.</td></tr>
+      <tr><td class="k">SuperProcure</td><td>Posts written for heads of logistics, one call to action, a public freight index</td><td>A monthly lane-rate snapshot from FreightBid, aggregated, with client sign-off.</td></tr>
+      <tr><td class="k">Wobot.ai</td><td>One named detection per post: no hard hat, a person in a forklift zone</td><td>Surveillance posts show one detection each, labelled “in testing”.</td></tr>
+      <tr><td class="k">Happy Visitor · Agrex.ai</td><td>India “2026 guide” pages with compliance hooks</td><td>Gate posts cite the DPDP Act 2023 and the Factories Act 1948; pharma posts cite GMP.</td></tr>
+      <tr><td class="k">Faclon Labs</td><td>A G2 profile with 18 reviews and a headline ROI claim</td><td>Ask the two VEMS clients for written reviews on Google and G2.</td></tr>
+    </table></div>
+    <p class="note"><strong style="color:var(--ink)">Rooms worth being in:</strong> IMTEX 2027 (21–27 January, Bengaluru), BDMA(I) in Hyderabad (350+ bulk drug makers, about 75% of them MSMEs), and FTCCI and CII Telangana events.</p>
+    <p class="note">Source: Busy Fox market scan of competitor websites, press releases, G2 and directory listings, 18 November 2026. Competitor figures are their own claims. <a href="../research/market.md">Full source list</a>.</p>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 5 · 02 GOAL ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>02 · Goal and targets</div></div>
+  <div class="content">
+    <div class="sh" id="s02">
+      <div class="num">02</div>
+      <h2>Goal and targets</h2>
+      <p class="lede">Two goals. <strong>Visibility:</strong> be a known name to the people who run mid-size plants in Telangana, Andhra Pradesh, Maharashtra and Gujarat. <strong>New clients:</strong> turn that attention into demos, Plant Data Audits and site visits.</p>
+    </div>
+    <div class="lab" style="margin-bottom:2.4mm">90-day targets</div>
+    <div class="stats three">
+      <div><b>2,00,000</b><span>LinkedIn impressions, page and both founders combined</span></div>
+      <div><b>+550</b><span>new followers on the PlantiqX LinkedIn page</span></div>
+      <div><b>2,500</b><span>website visits that come from social</span></div>
+      <div><b>50</b><span>leads: forms, WhatsApp enquiries, DMs, audit requests</span></div>
+      <div><b>12</b><span>demos booked with qualified buyers</span></div>
+      <div><b>6</b><span>Plant Data Audits or site visits</span></div>
+    </div>
+    <p class="note">Targets set by Busy Fox for planning, not forecasts or past results. They assume the cadence in section 05, both founders posting weekly and the Starter paid tier from Month 2. Reset against real baselines at day 30; monthly targets in section 11.</p>
+    <div class="gap-s"></div>
+    <div class="rule-note">What we don’t promise: viral posts, follower spikes or leads in week one. Plant buyers move slowly. Month 1 builds the base that Months 2 and 3 convert.</div>
+    <div class="gap"></div>
+    <h3>Why a plant head will respond to this</h3>
+    <div class="tw"><table style="font-size:8.2pt">
+      <colgroup><col style="width:24%"><col></colgroup>
+      <tr><td class="k">Change feels risky</td><td>Plant heads protect running lines. “Brownfield first” and “nothing gets replaced” answer that fear before it is raised.</td></tr>
+      <tr><td class="k">Honesty earns trust</td><td>Saying “in testing” out loud makes “live” believable. Buyers who catch one overclaim stop reading.</td></tr>
+      <tr><td class="k">Familiar names get the meeting</td><td>B2B buyers need many touches before they reply. Two founders posting every week, plus retargeting, keeps the name in front of them.</td></tr>
+      <tr><td class="k">Small steps, then bigger ones</td><td>A poll, then a checklist, then a free audit, then a demo. Each step is easy, and each makes the next one more likely.</td></tr>
+    </table></div>
+    <div class="gap-s"></div>
+    <h3>Bets we test, with a rule for cutting them <span class="small" style="font-family:var(--f-body);font-weight:400">(Busy Fox planning rules, reviewed monthly)</span></h3>
+    <div class="tw"><table style="font-size:8.2pt">
+      <colgroup><col style="width:24%"><col style="width:30%"><col style="width:23%"><col></colgroup>
+      <tr><th>Bet</th><th>Early signal we watch</th><th>Keep if</th><th>Cut or change if</th></tr>
+      <tr><td class="k">Founder-led LinkedIn</td><td>Comments and profile visits from target roles</td><td>Rising month on month</td><td>Flat after 6 weeks: change topics, not cadence</td></tr>
+      <tr><td class="k">Instagram reels</td><td>Saves, shares and follows from the four target states</td><td>Reach grows and retargeting pool builds</td><td>Under 1,000 reach per reel after 8 weeks: drop to one post a week</td></tr>
+      <tr><td class="k">Meta ads</td><td>Cost per lead and share that qualify</td><td>At least 1 in 4 leads qualifies</td><td>Below that after 4 weeks: move the money to LinkedIn</td></tr>
+    </table></div>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 4 · 03 PERSONAS ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>03 · Who we talk to</div></div>
+  <div class="content">
+    <div class="sh" id="s03">
+      <div class="num">03</div>
+      <h2>Who we talk to</h2>
+      <p class="lede">PlantiqX sells to five people inside the same plant. Each one has a different problem, reads different things and needs a different first post. We write to one of them at a time.</p>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col style="width:19%"><col style="width:31%"><col style="width:22%"><col></colgroup>
+      <tr><th>Who</th><th>The pain, in their words</th><th>What answers it</th><th>What they need to see</th></tr>
+      <tr>
+        <td class="k">Plant head · operations manager</td>
+        <td class="q">“Every morning I build the picture of my plant from five people in five formats.”<br>“By the time a problem reaches me, it’s already lost production.”</td>
+        <td>The platform: one login, one data layer, plant-wide dashboards and alerts</td>
+        <td>One screen with the whole plant on it, running on the machines they already have</td>
+      </tr>
+      <tr>
+        <td class="k">Maintenance head</td>
+        <td class="q">“We find out a machine stopped when production calls us.”<br>“The maintenance history is in a notebook and in one technician’s head.”</td>
+        <td>Asset Management <span class="st live">Live</span> with IoT monitoring; furnace monitoring as proof</td>
+        <td>Old machines connected over Modbus, OPC-UA or MQTT; threshold alerts on the phone; a full history per asset</td>
+      </tr>
+      <tr>
+        <td class="k">Admin, HR and security head</td>
+        <td class="q">“If we had to evacuate right now, I couldn’t tell you who is inside.”<br>“Visitors walk in before the person they’re meeting has said yes.”</td>
+        <td>VEMS <span class="st live">Live</span>; Factory Surveillance <span class="st uat">Testing</span>; AttendEase</td>
+        <td>QR entry with host approval, who-is-on-site at any moment, searchable logs, DPDP-aligned data terms</td>
+      </tr>
+      <tr>
+        <td class="k">Logistics and supply chain head</td>
+        <td class="q">“I call six transporters, get four rates on WhatsApp, and can’t show anyone why I picked one.”</td>
+        <td>FreightBid <span class="st live">Live</span></td>
+        <td>Bids side by side, the award on record, a wider pool of transporters than the usual few</td>
+      </tr>
+      <tr>
+        <td class="k">Senior management · MD, director, CFO</td>
+        <td class="q">“We pay one power bill and one maintenance bill, and nobody can tell me where either goes.”<br>“I don’t want five vendors for five problems.”</td>
+        <td>The platform; Energy Monitoring <span class="st uat">Testing</span>; SETL as promoting shareholder</td>
+        <td>Cost by machine, line and shift; a vendor that will be around; founders who know how plants run</td>
+      </tr>
+    </table></div>
+    <div class="gap"></div>
+    <div class="cols2">
+      <div>
+        <h3>Also in the room</h3>
+        <p class="small" style="color:var(--ink)"><strong>The IT head</strong> doesn’t start the deal but can stop it. They ask about single sign-on (VEMS supports SAML 2.0 with Microsoft Entra ID), where data lives and how visitor data is handled. <strong>Transporters</strong> are the other side of FreightBid. Both get supporting posts, not their own campaigns.</p>
+      </div>
+      <div>
+        <h3>Where they spend time</h3>
+        <p class="small" style="color:var(--ink)">LinkedIn during the working day. WhatsApp all day, mostly in industry and association groups. Industry summits and plant visits. YouTube when they are checking how something works before a meeting. Google when someone forwards them a name.</p>
+      </div>
+    </div>
+    <p class="note">The quotes above are the kind of thing these buyers say, written by Busy Fox to brief our writers. They are not testimonials and will never be published as quotes from real people.</p>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 5 · 04 POSITIONING ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>04 · Positioning and pillars</div></div>
+  <div class="content">
+    <div class="sh" id="s04">
+      <div class="num">04</div>
+      <h2>Positioning and message pillars</h2>
+    </div>
+    <div class="rule-note" style="font-size:12.2pt;line-height:1.4">For mid-size Indian manufacturers still running on registers, spreadsheets and phone calls, PlantiqX puts assets, the gate, cameras, energy and freight on one login and one data layer, using the machines the plant already has. It is built around each plant’s real problem, by people who have worked on the floor, and backed by a listed equipment manufacturer.</div>
+    <div class="gap-s"></div>
+    <p><span class="lab">The line we repeat everywhere</span><br><span style="font-family:var(--f-head);font-weight:600;font-size:14pt;color:var(--purple);letter-spacing:-.01em">One plant. One login. The machines you already have.</span></p>
+    <div class="gap-s"></div>
+    <div class="tw"><table>
+      <colgroup><col style="width:17%"><col style="width:33%"><col style="width:30%"><col></colgroup>
+      <tr><th>Pillar</th><th>What we say</th><th>Proof we can show</th><th>What we never say</th></tr>
+      <tr><td class="k">One plant, one login</td><td>Assets, gate, cameras, energy and freight sit on one data layer, with one set of dashboards, alerts and reports.</td><td>VEMS runs on one login across every location. A motor drawing extra power shows up in both the energy and asset views.</td><td>“End-to-end digital transformation”</td></tr>
+      <tr><td class="k">Brownfield first</td><td>Your older machines can send data. Sensors and gateways retrofit them over Modbus, OPC-UA or MQTT. Nothing gets replaced.</td><td>Furnace monitoring. The OPEX summit talk on brownfield process plants.</td><td>“Rip and replace”, “Industry 4.0 overnight”</td></tr>
+      <tr><td class="k">Built around your problem</td><td>We start from your process: a questionnaire, a study of the site and its wiring, then a design with a bill of materials and a cost summary.</td><td>The four-step project method. The controller test jig, used to prove a design before it reaches site.</td><td>“Plug-and-play for every plant”</td></tr>
+      <tr><td class="k">Proof from the floor</td><td>Here is what’s live, where it runs and what it does. Here is what’s still in testing.</td><td>Asset Management, VEMS and FreightBid live. Founders’ plant and data backgrounds. SETL as promoting shareholder.</td><td>Client names, numbers or quotes without written permission</td></tr>
+    </table></div>
+    <div class="gap"></div>
+    <h3>Plant words we use</h3>
+    <div class="tw"><table style="font-size:8.4pt">
+      <colgroup><col style="width:50%"><col></colgroup>
+      <tr><th>We write</th><th>Instead of</th></tr>
+      <tr><td>Breakdowns found late</td><td style="color:var(--steel)">Unplanned downtime challenges</td></tr>
+      <tr><td>The paper register at the gate</td><td style="color:var(--steel)">Legacy visitor workflows</td></tr>
+      <tr><td>Which compressor ran all night</td><td style="color:var(--steel)">AI-driven energy insights</td></tr>
+      <tr><td>Set value against present value</td><td style="color:var(--steel)">Intelligent real-time monitoring</td></tr>
+      <tr><td>Who is inside the plant right now</td><td style="color:var(--steel)">Complete operational visibility</td></tr>
+      <tr><td>Works with the machines you have</td><td style="color:var(--steel)">Next-generation smart factory platform</td></tr>
+    </table></div>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 6 · 05 CHANNELS ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>05 · Channel plan</div></div>
+  <div class="content">
+    <div class="sh" id="s05">
+      <div class="num">05</div>
+      <h2>Channel plan</h2>
+      <p class="lede">LinkedIn is where PlantiqX’s buyers read, check out vendors and accept meetings. Every other channel supports it: Instagram and YouTube carry the visuals, Google confirms we’re real, WhatsApp closes the loop.</p>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col style="width:21%"><col style="width:39%"><col style="width:12%"><col></colgroup>
+      <tr><th>Channel</th><th>Its job</th><th>Per week</th><th>Formats</th></tr>
+      <tr><td class="k">LinkedIn · PlantiqX page</td><td>The proof hub buyers check before a meeting. Home of case stories, lead forms and ads.</td><td>3 posts</td><td>Carousels, short videos, polls, case stories</td></tr>
+      <tr><td class="k">LinkedIn · Krishna Kanth</td><td>The plant-floor voice. Why PlantiqX exists, what he saw in every department, opinions on how plants should run.</td><td>2 posts<br>+ 15 min a day of comments</td><td>Text with one photo, short talking clips</td></tr>
+      <tr><td class="k">LinkedIn · Srikanth</td><td>The data voice. How a reading gets from a controller to a dashboard, and why most plant data can’t be trusted yet.</td><td>1 post</td><td>Text posts, simple diagrams</td></tr>
+      <tr><td class="k">Instagram · @plantiqx.ai</td><td>Shop-floor visuals and team. Builds the audience we retarget, and reassures anyone who checks us out on their phone.</td><td>3 posts<br>+ stories</td><td>Reels, carousels, before/after, stories</td></tr>
+      <tr><td class="k">YouTube</td><td>Depth. The demo film, explainers and the summit talk. Linked in WhatsApp follow-ups and on the website.</td><td>2 videos a month<br>+ 2 Shorts</td><td>4–6 min explainers, demos, Shorts cut from reels</td></tr>
+      <tr><td class="k">WhatsApp Business</td><td>Follow-up only: reply to every lead, share a relevant clip, book the demo. Catalogue of modules, quick replies, labels per lead stage.</td><td>As leads come<br>+ 1 monthly update</td><td>Messages to opted-in contacts only</td></tr>
+      <tr><td class="k">Google Business Profile</td><td>What shows up when someone searches the name or “industrial IoT company Hyderabad”. Photos, updates, Q&amp;A, reviews from clients who agree.</td><td>1 update</td><td>Photos, short updates</td></tr>
+    </table></div>
+    <div class="gap"></div>
+    <h3>The OPEX summit talk as a content engine</h3>
+    <p style="margin-bottom:3.4mm">PlantiqX presents <em>Bridging Legacy and Digital: An IoT Roadmap for Brownfield Process Plants</em> at the 8th Annual OPEX &amp; Manufacturing Excellence in Chemicals Summit 2026. That one talk can feed about twenty pieces of content. Date to be confirmed by PlantiqX.</p>
+    <div class="cols3 blk">
+      <div style="border-top:.9pt solid var(--ink);padding-top:2.4mm"><div class="lab" style="margin-bottom:1.4mm">Two weeks before</div>Three teaser posts, one idea from the talk each. A founder post announcing it. Connection requests to attendees from chemical and pharma plants.</div>
+      <div style="border-top:.9pt solid var(--ink);padding-top:2.4mm"><div class="lab" style="margin-bottom:1.4mm">On the day</div>Photos and a 30-second clip. A founder post the same evening. Every card collected gets a WhatsApp follow-up within 48 hours.</div>
+      <div style="border-top:.9pt solid var(--ink);padding-top:2.4mm"><div class="lab" style="margin-bottom:1.4mm">Four weeks after</div>The full talk on YouTube if recording is allowed, six to eight clips, a roadmap carousel, and the Brownfield Readiness Checklist as a lead magnet.</div>
+    </div>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 7 · 06 CONTENT PILLARS ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>06 · Content pillars and formats</div></div>
+  <div class="content">
+    <div class="sh" id="s06">
+      <div class="num">06</div>
+      <h2>Content pillars and formats</h2>
+      <p class="lede">Five kinds of post, in a fixed mix. Most of the weight goes on plant problems and proof, because that is what a plant head stops scrolling for.</p>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col style="width:22%"><col style="width:9%"><col style="width:41%"><col></colgroup>
+      <tr><th>Content pillar</th><th class="n">Share</th><th>What goes in it</th><th>Main formats</th></tr>
+      <tr><td class="k">Plant problems, in plant words</td><td class="n">30%</td><td>One problem per post: the gate register, the late breakdown, the power bill, the freight phone calls. The problem first, PlantiqX second.</td><td>Carousels, before/after, polls</td></tr>
+      <tr><td class="k">Proof from the floor</td><td class="n">25%</td><td>What’s live and what it does: Asset Management, VEMS, FreightBid, furnace monitoring, the test jig on the bench.</td><td>Shop-floor clips, screen demos, case stories</td></tr>
+      <tr><td class="k">How it works</td><td class="n">20%</td><td>Modbus, OPC-UA and MQTT retrofits, set value vs present value, single sign-on, visitor data under the DPDP Act.</td><td>YouTube explainers, LinkedIn documents</td></tr>
+      <tr><td class="k">Founder perspective</td><td class="n">20%</td><td>Krishna Kanth on how plants really run. Srikanth on plant data. Opinions, lessons, the reasons behind the product.</td><td>Text posts, talking clips</td></tr>
+      <tr><td class="k">Company and people</td><td class="n">5%</td><td>The team, the summit, SETL, hiring, milestones the client allows us to share.</td><td>Photos, stories</td></tr>
+    </table></div>
+    <div class="gap"></div>
+    <div class="cols2">
+      <div>
+        <h3>Formats we’ll make</h3>
+        <ul class="dash small" style="color:var(--ink)">
+          <li><strong>LinkedIn carousels.</strong> Six to eight slides, one idea, plant language, purple and orange templates.</li>
+          <li><strong>Shop-floor clips.</strong> 20–45 seconds, real sound, English captions. Telugu or Hindi versions on Instagram where it helps.</li>
+          <li><strong>Founder posts.</strong> 150–250 words, one real photo, no hashtag walls.</li>
+          <li><strong>Screen demos.</strong> 60–90 seconds on dummy data. No client data ever appears on screen.</li>
+          <li><strong>Before / after.</strong> Paper register vs VEMS. One bill vs per-machine energy. Phone calls vs bids.</li>
+          <li><strong>YouTube explainers.</strong> Four to six minutes, cut into Shorts and LinkedIn clips.</li>
+          <li><strong>Polls.</strong> One a month, to learn how plants work today and to build retargeting lists.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>How we keep it coming</h3>
+        <ul class="dash small" style="color:var(--ink)">
+          <li><strong>One founder interview a week</strong>, 30–45 minutes, recorded. Each one gives three or four posts.</li>
+          <li><strong>One shoot day a month</strong> at a site where PlantiqX has written permission, plus the PlantiqX office and test bench.</li>
+          <li><strong>A technical check</strong> by a PlantiqX engineer on anything that names a protocol, a reading or a module status.</li>
+          <li><strong>Founders approve</strong> every post that goes out under their name. Nothing is published as them without a read.</li>
+          <li><strong>A two-week content bank</strong>, so a busy week at the plant never means a silent week online.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 8 · 06 TEN POSTS ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>06 · Ten posts we’d publish</div></div>
+  <div class="content">
+    <div class="sh">
+      <div class="num">06 · CONTINUED</div>
+      <h2>Ten posts we’d publish</h2>
+      <p class="lede">Written as they would go out. Each one opens on something a plant person recognises, then shows what PlantiqX does about it.</p>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col style="width:5%"><col style="width:19%"><col style="width:52%"><col></colgroup>
+      <tr><th>#</th><th>Format · channel</th><th>The hook</th><th>Pillar · module</th></tr>
+      <tr><td class="tag">01</td><td>Carousel · LinkedIn, Instagram</td><td><strong>“Your gate register knows who came in. Can it tell you who is still inside right now?”</strong> Paper register vs VEMS, slide by slide.</td><td>Plant problem · VEMS <span class="st live">Live</span></td></tr>
+      <tr><td class="tag">02</td><td>Before / after · LinkedIn, Instagram</td><td><strong>“One electricity bill. Every machine on it. No way to tell which one ran all night.”</strong> One bill vs per-machine, per-shift energy.</td><td>Plant problem · Energy <span class="st uat">Testing</span></td></tr>
+      <tr><td class="tag">03</td><td>Shop-floor clip · LinkedIn, Reel</td><td><strong>“Set value. Present value. When the second crosses the first, the supervisor’s phone knows before the batch report does.”</strong></td><td>Proof · furnace monitoring <span class="st live">Deployed</span></td></tr>
+      <tr><td class="tag">04</td><td>Explainer · YouTube, LinkedIn cut</td><td><strong>“Your 20-year-old machine can send data today. It takes a sensor, a gateway and someone who can read a Modbus register map.”</strong></td><td>How it works · brownfield retrofit</td></tr>
+      <tr><td class="tag">05</td><td>Founder post · Krishna Kanth</td><td><strong>“I’ve worked in stores, maintenance, the gate and the back office. Every department kept its own register. None of them told the same story.”</strong></td><td>Founder · the platform</td></tr>
+      <tr><td class="tag">06</td><td>Founder post · Srikanth</td><td><strong>“I spent a decade building data pipelines on Splunk and BI. A dashboard is only as good as the data under it. In most plants, that data is still on paper.”</strong></td><td>Founder · one data layer</td></tr>
+      <tr><td class="tag">07</td><td>Carousel · LinkedIn</td><td><strong>“If nobody measures downtime, nobody reduces it.”</strong> What stopped, where, and for how long, on one screen.</td><td>Proof · Asset Management <span class="st live">Live</span></td></tr>
+      <tr><td class="tag">08</td><td>Carousel · LinkedIn</td><td><strong>“How many transporters did you call for your last load? How many of those calls could you show your MD?”</strong></td><td>Plant problem · FreightBid <span class="st live">Live</span></td></tr>
+      <tr><td class="tag">09</td><td>Short video · LinkedIn, Instagram</td><td><strong>“Most factory cameras get watched after the incident. We’re testing what happens when the camera raises the alert itself.”</strong> Helmets, vests, restricted zones.</td><td>How it works · Surveillance <span class="st uat">Testing</span></td></tr>
+      <tr><td class="tag">10</td><td>Sector post · LinkedIn, pharma and chemicals</td><td><strong>“Running a brownfield process plant? The data you need is already in your controllers. Nobody is reading it.”</strong> Ties into the summit talk.</td><td>Brownfield first · summit</td></tr>
+    </table></div>
+    <p class="note">Founder hooks are drafts based on the profile. Each founder rewrites them in his own words before anything is published. Hooks are tested, not assumed: we keep the ones that earn saves, comments from target roles and profile visits, and drop the rest.</p>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 9 · 07 ROADMAP ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>07 · The 90-day roadmap</div></div>
+  <div class="content">
+    <div class="sh" id="s07">
+      <div class="num">07</div>
+      <h2>The 90-day roadmap</h2>
+      <p class="lede">Three months, each with one job. First look credible when a buyer checks. Then show proof. Then ask for the conversation.</p>
+    </div>
+    <div class="road">
+      <div class="m">
+        <h3>Month 1 · Foundation</h3>
+        <div class="when">30 Nov – 29 Dec</div>
+        <div class="goal">Look credible to any buyer who checks, and start publishing.</div>
+        <ul class="dash">
+          <li>Fix the website basics (box below), then every profile: LinkedIn page, both founders, Instagram, YouTube, Google Business Profile</li>
+          <li>Social brand kit: carousel, quote, before/after and video templates</li>
+          <li>Four pillar pieces: one long LinkedIn article per message pillar</li>
+          <li>Four founder interviews, giving a bank of 16 or more posts</li>
+          <li>Case-study permission requests to the VEMS, FreightBid and furnace monitoring clients; first shoot day</li>
+          <li>Tracking: LinkedIn Insight Tag, Meta Pixel, GA4 events, UTM links, a lead sheet</li>
+          <li>Publish weeks 1–4 of the calendar (section 08)</li>
+        </ul>
+        <div class="by"><b>By day 30</b>Profiles complete · 30+ posts live · baselines recorded · targets reset</div>
+      </div>
+      <div class="m">
+        <h3>Month 2 · Proof</h3>
+        <div class="when">30 Dec – 28 Jan</div>
+        <div class="goal">Show what’s live, with evidence a buyer can check.</div>
+        <ul class="dash">
+          <li>Case stories on VEMS, FreightBid and furnace monitoring, named or anonymised as each client allows</li>
+          <li>Demo film: a 3–4 minute platform walkthrough on dummy data, plus a 60-second cut</li>
+          <li>The summit run: teasers, the day itself, the recording and clips (date to be confirmed)</li>
+          <li>Paid starts on the Starter tier: boost the best posts, first LinkedIn lead form. IMTEX 2027 (21–27 Jan) for founder meetings</li>
+          <li>Founder comment routine: 15 minutes a day on posts by target buyers</li>
+          <li>Write and design the Plant Data Audit offer and its landing page</li>
+        </ul>
+        <div class="by"><b>By day 60</b>2–3 case stories · demo film live · first paid leads · real cost per lead known</div>
+      </div>
+      <div class="m">
+        <h3>Month 3 · Demand</h3>
+        <div class="when">29 Jan – 27 Feb</div>
+        <div class="goal">Turn attention into conversations with the right plants.</div>
+        <ul class="dash">
+          <li>Launch the free Plant Data Audit and the Brownfield Readiness Checklist: landing page plus LinkedIn lead form</li>
+          <li>A 45-minute webinar: “Connecting legacy machines without replacing them”</li>
+          <li>Retargeting on LinkedIn and Meta: site visitors, video viewers, people who opened a lead form</li>
+          <li>Outbound to a shortlist of target plants in the four states: founders connect and share a relevant post before any pitch</li>
+          <li>Move to the Growth tier if cost per lead is on target</li>
+          <li>Day-90 review: what worked, what to cut, the next quarter</li>
+        </ul>
+        <div class="by"><b>By day 90</b>Audit offer live · webinar done · 12 demos (target) · plan for the next quarter</div>
+      </div>
+    </div>
+    <div class="gap"></div>
+    <div class="fixbox">
+      <div class="hd"><h3>Fix before we post</h3><span class="lab">Month 1 · Week 1 · website</span></div>
+      <p class="small" style="color:var(--ink);margin-bottom:2.4mm">Every post sends buyers to www.plantiqx.com. Our website audit found five things they would notice first:</p>
+      <ol class="need">
+        <li>Add a meta description and Open Graph tags, so shared links stop showing bare on LinkedIn and WhatsApp</li>
+        <li>Fix robots.txt and sitemap.xml; both return the homepage HTML today</li>
+        <li>Remove internal notes from public pages, such as “Implications for PlantIQX Positioning”</li>
+        <li>Put real, client-approved numbers under “Real Numbers. Proven Impact.”, or take the heading down until we have them</li>
+        <li>One name and one set of contacts everywhere: PlantiqX, not PlantIQX; one email (info@plantiqx.com or info@plantiqx.in, not both); fix or redirect plantiqx.in, which returns a 502 error</li>
+      </ol>
+      <p class="small" style="margin:1mm 0 0">Full audit: <a href="../audit/index.html">../audit/index.html</a></p>
+    </div>
+
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 10 · 08 CALENDAR WEEKS 1–2 ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>08 · Four-week calendar</div></div>
+  <div class="content">
+    <div class="sh" id="s08">
+      <div class="num">08</div>
+      <h2>Four-week content calendar</h2>
+      <p class="lede">The first four weeks of publishing, from Monday 30 November. Each week has one theme so the posts build on each other.</p>
+    </div>
+    <div class="tw"><table class="cal">
+      <colgroup><col style="width:9%"><col style="width:21%"><col style="width:19%"><col></colgroup>
+      <tr><th>Day</th><th>Channel</th><th>Format</th><th>Topic</th></tr>
+      <tr class="wk"><td colspan="4">Week 1 · Who we are and what’s live<span>30 Nov – 5 Dec</span></td></tr>
+      <tr><td>Mon</td><td>LinkedIn page</td><td>Carousel</td><td>One plant, one login: the five places plant data lives today, and the one place it should</td></tr>
+      <tr><td>Mon</td><td>Instagram</td><td>Reel · 20 s</td><td>The gate in 20 seconds: QR entry, host approval, check-in (VEMS)</td></tr>
+      <tr><td>Tue</td><td>LinkedIn · Krishna Kanth</td><td>Founder post</td><td>Why I started PlantiqX: every department kept its own register</td></tr>
+      <tr><td>Wed</td><td>LinkedIn page</td><td>Short video · 45 s</td><td>Furnace monitoring: set value against present value, and the alert</td></tr>
+      <tr><td>Wed</td><td>Instagram</td><td>Carousel</td><td>Paper register vs VEMS</td></tr>
+      <tr><td>Thu</td><td>LinkedIn · Srikanth</td><td>Founder post</td><td>A dashboard is only as good as the data under it</td></tr>
+      <tr><td>Fri</td><td>LinkedIn page</td><td>Poll</td><td>How does your plant record visitors today?</td></tr>
+      <tr><td>Sat</td><td>Instagram · Google</td><td>Photo · update</td><td>The team at the test bench; profile photos and first update</td></tr>
+      <tr class="wk"><td colspan="4">Week 2 · Brownfield first<span>7 – 12 Dec</span></td></tr>
+      <tr><td>Mon</td><td>LinkedIn page</td><td>Carousel</td><td>Your old machine can talk: four ways to get data out of equipment with no digital output</td></tr>
+      <tr><td>Mon</td><td>Instagram</td><td>Reel · 30 s</td><td>Close-up: a gateway being wired to a panel</td></tr>
+      <tr><td>Tue</td><td>LinkedIn · Krishna Kanth</td><td>Founder post</td><td>Nobody running a plant wants to hear “replace the machine”</td></tr>
+      <tr><td>Wed</td><td>YouTube + LinkedIn</td><td>Explainer · 5 min</td><td>Modbus, OPC-UA and MQTT, explained in plant words</td></tr>
+      <tr><td>Thu</td><td>LinkedIn · Srikanth</td><td>Founder post</td><td>What a register map teaches you about data quality</td></tr>
+      <tr><td>Fri</td><td>LinkedIn page</td><td>Document</td><td>Ten questions to ask before you buy any IoT for an older plant</td></tr>
+      <tr><td>Sat</td><td>Instagram · Google</td><td>Carousel · update</td><td>Downtime: what stopped, where, for how long (Asset Management)</td></tr>
+    </table></div>
+    <div class="gap"></div>
+    <h3>Every week, alongside the calendar</h3>
+    <ul class="dash small cols2" style="color:var(--ink);gap:0 8mm">
+      <li>Instagram stories on three or four days, from the week’s shoot</li>
+      <li>Founders spend 15 minutes a day commenting on target buyers’ posts</li>
+      <li>Every comment and DM answered within the working day</li>
+      <li>Links go in the first comment, not the post body, so LinkedIn doesn’t bury the post</li>
+    </ul>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 11 · 08 CALENDAR WEEKS 3–4 ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>08 · Four-week calendar</div></div>
+  <div class="content">
+    <div class="sh">
+      <div class="num">08 · CONTINUED</div>
+      <h2>Weeks three and four</h2>
+    </div>
+    <div class="tw"><table class="cal">
+      <colgroup><col style="width:9%"><col style="width:21%"><col style="width:19%"><col></colgroup>
+      <tr><th>Day</th><th>Channel</th><th>Format</th><th>Topic</th></tr>
+      <tr class="wk"><td colspan="4">Week 3 · The gate and the floor<span>14 – 19 Dec</span></td></tr>
+      <tr><td>Mon</td><td>LinkedIn page</td><td>Carousel</td><td>The fire-drill question: can your gate tell you who is inside right now?</td></tr>
+      <tr><td>Mon</td><td>Instagram</td><td>Reel · 30 s</td><td>One visit, from QR code to host approval</td></tr>
+      <tr><td>Tue</td><td>LinkedIn · Krishna Kanth</td><td>Founder post</td><td>The gate is the first thing a visitor sees and the last thing a plant digitises</td></tr>
+      <tr><td>Wed</td><td>LinkedIn page</td><td>Short video</td><td>Factory Surveillance, in testing: helmet, vest and restricted-zone alerts</td></tr>
+      <tr><td>Wed</td><td>Instagram</td><td>Before / after</td><td>The register book vs the live on-site list</td></tr>
+      <tr><td>Thu</td><td>LinkedIn · Srikanth</td><td>Founder post</td><td>Single sign-on with Entra ID, and why your IT head will ask about it</td></tr>
+      <tr><td>Fri</td><td>LinkedIn page</td><td>Text + image</td><td>Visitor data and India’s DPDP Act, 2023: what a gate system should do</td></tr>
+      <tr><td>Sat</td><td>Instagram · Google</td><td>Stories · update</td><td>Behind the scenes on a site visit (with permission)</td></tr>
+      <tr class="wk"><td colspan="4">Week 4 · Energy and freight<span>21 – 26 Dec</span></td></tr>
+      <tr><td>Mon</td><td>LinkedIn page</td><td>Carousel</td><td>One bill vs per-machine energy (in testing)</td></tr>
+      <tr><td>Mon</td><td>Instagram</td><td>Reel · 20 s</td><td>Which compressor ran all night?</td></tr>
+      <tr><td>Tue</td><td>LinkedIn · Krishna Kanth</td><td>Founder post</td><td>How much of your load ran on the DG set last month? If you have to check the logbook, that’s the problem</td></tr>
+      <tr><td>Wed</td><td>YouTube + LinkedIn</td><td>Demo · 3 min</td><td>FreightBid walkthrough: publish a load, compare bids, award it</td></tr>
+      <tr><td>Thu</td><td>LinkedIn · Srikanth</td><td>Founder post</td><td>What a full bid history tells you about what you pay for freight</td></tr>
+      <tr><td>Fri</td><td>LinkedIn page</td><td>Announcement</td><td>The OPEX summit talk, if the date is confirmed; otherwise a month-one roundup</td></tr>
+      <tr><td>Sat</td><td>Instagram · Google</td><td>Carousel · update</td><td>FreightBid for transporters: see the loads, get a fair chance to bid</td></tr>
+    </table></div>
+    <div class="gap"></div>
+    <div>
+      <div>
+        <h3>What can move</h3>
+        <p class="small" style="color:var(--ink)">Days and topics shift with client permissions, shoot access and the summit date. Christmas week (week 4) runs lighter on paid and heavier on evergreen posts. Anything naming a client waits for written approval and is swapped for an evergreen post if approval hasn’t come.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 12 · 09 LEAD ENGINE ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>09 · Lead engine</div></div>
+  <div class="content">
+    <div class="sh" id="s09">
+      <div class="num">09</div>
+      <h2>Lead engine</h2>
+      <p class="lede">Posts create attention. This is how attention becomes a site visit: a clear free offer, a reply the same working day, and one place where every lead is tracked.</p>
+    </div>
+    <div class="flow">
+      <div><i>01</i><b>See</b>Posts, founder posts, ads, the summit</div>
+      <div><i>02</i><b>Raise a hand</b>Lead form, WhatsApp click, DM, audit request</div>
+      <div><i>03</i><b>Reply</b>WhatsApp and a call, same working day</div>
+      <div><i>04</i><b>Qualify</b>Right plant, right role, live problem</div>
+      <div><i>05</i><b>Demo</b>30–45 min on the module that fits</div>
+      <div><i>06</i><b>Site visit</b>Or the Plant Data Audit</div>
+      <div><i>07</i><b>Proposal</b>Built around their process</div>
+    </div>
+    <div class="gap"></div>
+    <div class="cols2 blk">
+      <div>
+        <h3>What we offer in exchange</h3>
+        <p><strong>The Plant Data Audit (free).</strong> A PlantiqX engineer walks one area with the plant team: the gate, a machine line or the energy panel. The plant gets a one-page note on where its data sits today, what can be connected without replacing equipment, and the first step worth taking. In person in Telangana and Andhra Pradesh, on video elsewhere.</p>
+        <p><strong>Brownfield Readiness Checklist (PDF).</strong> Built from the summit talk. For people not ready to talk yet; it starts the follow-up.</p>
+        <p><strong>Where they sign up.</strong> One landing page on plantiqx.com with one short form (name, role, company, plant location, what’s hurting, WhatsApp opt-in). The same fields in a LinkedIn lead-gen form, so nobody has to leave LinkedIn.</p>
+      </div>
+      <div>
+        <h3>Follow-up, by WhatsApp and email</h3>
+        <ol class="seq" style="margin-bottom:4mm">
+          <li><b>Day 0</b>Thank you, the checklist or booking link, and who will call</li>
+          <li><b>Day 1</b>A call from PlantiqX to understand the plant and book the demo</li>
+          <li><b>Day 3</b>A 60–90 second clip of the module that matches their problem</li>
+          <li><b>Day 7</b>A case story or the demo film</li>
+          <li><b>Day 14</b>One last note. After that, the monthly update only</li>
+        </ol>
+        <p class="small" style="color:var(--ink)">Opted-in contacts only. Anyone who says stop is removed the same day.</p>
+        <h3 style="margin-top:4mm">Qualifying in three questions</h3>
+        <ul class="dash small" style="color:var(--ink)">
+          <li>Is it a manufacturing or engineering plant, or a shipper or transporter for FreightBid?</li>
+          <li>Does this person own the problem, or sit next to whoever does?</li>
+          <li>Is there a live problem and a rough timeline? Hot, warm or nurture.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gap-s"></div>
+    <h3>Tracking</h3>
+    <p class="small" style="color:var(--ink)">UTM tags on every link. LinkedIn Insight Tag and Meta Pixel on the website. GA4 conversions for form submits, WhatsApp clicks and call clicks. One shared lead sheet (or HubSpot’s free CRM) with source, persona, module, stage and next action. A 15-minute lead review with PlantiqX every Monday.</p>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 13 · 10 PAID ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>10 · Paid boost</div></div>
+  <div class="content">
+    <div class="sh" id="s10">
+      <div class="num">10</div>
+      <h2>Paid boost</h2>
+      <p class="lede">Paid only amplifies posts that already work organically. We start small in Month 2, learn what a real lead costs, then scale. Three monthly tiers:</p>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col></colgroup>
+      <tr><th>Per month (estimates)</th><th>Starter</th><th>Growth</th><th>Aggressive</th></tr>
+      <tr><td class="k">Media budget</td><td class="k" style="color:var(--purple)">₹35,000</td><td class="k" style="color:var(--purple)">₹75,000</td><td class="k" style="color:var(--purple)">₹1,50,000</td></tr>
+      <tr><td>LinkedIn Ads</td><td>₹25,000</td><td>₹55,000</td><td>₹1,10,000</td></tr>
+      <tr><td>Meta (Instagram + Facebook)</td><td>₹10,000</td><td>₹20,000</td><td>₹40,000</td></tr>
+      <tr><td>What runs</td><td>Boosted founder and proof posts; one lead form; Meta retargeting</td><td>Plus Plant Data Audit ads by persona; video ads; wider retargeting</td><td>Plus webinar promotion, conversation ads to named target plants, sector-by-sector creative</td></tr>
+      <tr><td>LinkedIn clicks</td><td>125–250</td><td>275–550</td><td>550–1,100</td></tr>
+      <tr><td>Leads, all paid sources</td><td>8–20</td><td>20–45</td><td>40–90</td></tr>
+      <tr><td>Best for</td><td>Month 2: learning the cost per lead</td><td>Month 3, if cost per lead is on target</td><td>After the audit offer has proven itself</td></tr>
+    </table></div>
+    <p class="note">All costs are Busy Fox planning estimates: about ₹100–200 per LinkedIn click for senior manufacturing roles in India, ₹1,500–4,000 per LinkedIn lead-form lead, and ₹400–1,200 per Meta lead, with lower quality on Meta. Real costs depend on the auction, audience size and creative, and are known after three to four weeks of spend. Media spend only, paid by PlantiqX directly to LinkedIn and Meta; excludes GST and agency fees. <strong style="color:var(--ink)">Our recommendation:</strong> nothing in Month 1, Starter in Month 2, Growth in Month 3 if leads cost ₹3,500 or less. About ₹1,10,000 of media over the 90 days.</p>
+    <div class="gap"></div>
+    <div class="cols2 blk">
+      <div>
+        <h3>LinkedIn targeting</h3>
+        <p><span class="lab">Job titles</span><br>Plant Head, Works Manager, General Manager Operations, Operations Manager, Maintenance Manager, Head of Engineering, Admin Manager, HR Head, Security Head, Logistics Manager, Supply Chain Head, Managing Director, Director, CFO</p>
+        <p><span class="lab">Industries</span><br>Pharmaceutical manufacturing, chemical manufacturing, industrial machinery, HVAC and building products, appliances and electrical equipment, transportation and logistics</p>
+        <p><span class="lab">Company size and seniority</span><br>51–1,000 employees; manager and above. Entry-level and training excluded.</p>
+      </div>
+      <div>
+        <h3>Where</h3>
+        <ul class="dash">
+          <li><strong>Telangana:</strong> Hyderabad, Medchal, Jeedimetla, Patancheru, Pashamylaram</li>
+          <li><strong>Andhra Pradesh:</strong> Visakhapatnam, Anakapalli, Sri City</li>
+          <li><strong>Maharashtra:</strong> Pune and Chakan, Aurangabad, Thane and Taloja</li>
+          <li><strong>Gujarat:</strong> Ahmedabad, Vadodara, Ankleshwar and Bharuch, Vapi</li>
+        </ul>
+        <h3 style="margin-top:4mm">Meta targeting</h3>
+        <p>Radius targeting around the same industrial belts, ages 28 and up. Mostly retargeting of site visitors, video viewers and lead-form openers. Lookalikes once we have 100 or more leads. Interest targeting only as a small test.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 14 · 11 KPI ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>11 · KPI dashboard</div></div>
+  <div class="content">
+    <div class="sh" id="s11">
+      <div class="num">11</div>
+      <h2>KPI dashboard</h2>
+      <p class="lede">What we report every month, and the target for each. The top half tells us whether people are noticing PlantiqX. The bottom half tells us whether that is turning into business.</p>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col style="width:24%"><col style="width:28%"><col style="width:12%"><col style="width:9%"><col style="width:9%"><col style="width:9%"><col></colgroup>
+      <tr><th>Metric</th><th>What counts</th><th>Source</th><th class="n">M1 target</th><th class="n">M2 target</th><th class="n">M3 target</th><th class="n">90 days</th></tr>
+      <tr class="wk"><td colspan="7">Visibility</td></tr>
+      <tr><td class="k">Impressions</td><td>LinkedIn page and both founders</td><td>LinkedIn</td><td class="n">40,000</td><td class="n">70,000</td><td class="n">90,000</td><td class="n">2,00,000</td></tr>
+      <tr><td class="k">Accounts reached</td><td>Instagram, organic and paid</td><td>Meta</td><td class="n">8,000</td><td class="n">15,000</td><td class="n">25,000</td><td class="n">48,000</td></tr>
+      <tr><td class="k">New followers</td><td>LinkedIn page</td><td>LinkedIn</td><td class="n">120</td><td class="n">180</td><td class="n">250</td><td class="n">550</td></tr>
+      <tr><td class="k">New followers</td><td>Founders combined, target roles only</td><td>LinkedIn</td><td class="n">100</td><td class="n">150</td><td class="n">200</td><td class="n">450</td></tr>
+      <tr><td class="k">New followers</td><td>Instagram</td><td>Meta</td><td class="n">60</td><td class="n">100</td><td class="n">150</td><td class="n">310</td></tr>
+      <tr><td class="k">Engagement rate</td><td>LinkedIn page posts</td><td>LinkedIn</td><td class="n">3%</td><td class="n">3.5%</td><td class="n">4%</td><td class="n">—</td></tr>
+      <tr><td class="k">Profile and page visits</td><td>LinkedIn page</td><td>LinkedIn</td><td class="n">400</td><td class="n">700</td><td class="n">1,000</td><td class="n">2,100</td></tr>
+      <tr class="wk"><td colspan="7">New clients</td></tr>
+      <tr><td class="k">Website visits from social</td><td>Sessions with a social UTM or referrer</td><td>GA4</td><td class="n">400</td><td class="n">800</td><td class="n">1,300</td><td class="n">2,500</td></tr>
+      <tr><td class="k">Leads</td><td>Forms, WhatsApp enquiries, DMs, audit requests</td><td>Lead sheet</td><td class="n">5</td><td class="n">15</td><td class="n">30</td><td class="n">50</td></tr>
+      <tr><td class="k">Qualified leads</td><td>Pass all three qualifying questions</td><td>Lead sheet</td><td class="n">2</td><td class="n">6</td><td class="n">10</td><td class="n">18</td></tr>
+      <tr><td class="k">Demos booked</td><td>Held or confirmed in the calendar</td><td>Lead sheet</td><td class="n">1</td><td class="n">4</td><td class="n">7</td><td class="n">12</td></tr>
+      <tr><td class="k">Audits or site visits</td><td>Plant Data Audits and visits done</td><td>Lead sheet</td><td class="n">0</td><td class="n">2</td><td class="n">4</td><td class="n">6</td></tr>
+      <tr><td class="k">Cost per lead</td><td>Paid spend ÷ paid leads</td><td>Ads + sheet</td><td class="n">—</td><td class="n">≤ ₹3,500</td><td class="n">≤ ₹2,500</td><td class="n">—</td></tr>
+      <tr><td class="k">Cost per qualified lead</td><td>Paid spend ÷ qualified paid leads</td><td>Ads + sheet</td><td class="n">—</td><td class="n">≤ ₹10,000</td><td class="n">≤ ₹7,500</td><td class="n">—</td></tr>
+    </table></div>
+    <p class="note">Every number on this page is a target set by Busy Fox for planning. None is a forecast, a guarantee or a past result. Baselines are recorded in week 1 and the targets are reset at the day-30 review. Reporting: a short WhatsApp summary every Monday, and a one-page monthly report with a 30-minute review call.</p>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<!-- ============ 15 · 12 WHO DOES WHAT + 13 NEXT STEPS ============ -->
+<section class="page">
+  <div class="run"><img class="logo-run" src="../brand/original/plantiqx-logo-color.png" alt="PlantiqX"><div>12 · Who does what</div></div>
+  <div class="content">
+    <div class="sh" id="s12">
+      <div class="num">12</div>
+      <h2>Who does what</h2>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col style="width:28%"><col style="width:38%"><col></colgroup>
+      <tr><th>Work</th><th>Busy Fox</th><th>PlantiqX</th></tr>
+      <tr><td class="k">Strategy, calendar, reporting</td><td>Owns and runs it</td><td>Agrees targets, joins the monthly review</td></tr>
+      <tr><td class="k">Profiles, brand kit, templates</td><td>Builds and maintains</td><td>Approves once</td></tr>
+      <tr><td class="k">Page posts, design, video edits</td><td>Writes, designs, edits, schedules</td><td>Technical check, approval within two working days</td></tr>
+      <tr><td class="k">Founder posts</td><td>Interviews, drafts, photos</td><td>Founders rewrite, approve and post</td></tr>
+      <tr><td class="k">Shoots</td><td>Crew, shot list, edit</td><td>Site access, safety induction, permissions</td></tr>
+      <tr><td class="k">Case stories</td><td>Drafts the permission request and the story</td><td>Asks the client; gets written approval</td></tr>
+      <tr><td class="k">Ads and landing page</td><td>Sets up, runs and optimises</td><td>Pays media directly; gives website access</td></tr>
+      <tr><td class="k">Leads, demos, audits</td><td>Scripts, WhatsApp templates, lead sheet</td><td>Replies, calls, demos, site visits</td></tr>
+    </table></div>
+    <div class="gap-s"></div>
+    <h3>What we need from PlantiqX</h3>
+    <ol class="need">
+      <li>Admin access: LinkedIn page, Meta Business Suite, YouTube, Google Business Profile, website and GA4</li>
+      <li>Ad accounts on PlantiqX billing, and a WhatsApp Business number</li>
+      <li>A demo environment with dummy data, plus product screenshots</li>
+      <li>One shoot day a month at a site, with written permission</li>
+      <li>Case-study requests to the VEMS, FreightBid and furnace monitoring clients</li>
+      <li>Founder time: Krishna Kanth 45 min and Srikanth 30 min a week</li>
+      <li>One point of contact for approvals and technical checks</li>
+      <li>Summit date, session time, slides, and whether it can be recorded</li>
+      <li>A named person who replies to leads and books demos</li>
+    </ol>
+
+    <div class="gap"></div>
+    <div class="sh" id="s13" style="margin-bottom:3mm">
+      <div class="num">13</div>
+      <h2 style="font-size:19pt;margin-bottom:0">Next steps after tonight</h2>
+    </div>
+    <ol class="steps">
+      <li><i>01</i><b>Tonight, 18 Nov</b><span>Agree the goal, the four pillars and the targets. Pick the paid tier for Month 2 (we recommend Starter).</span></li>
+      <li><i>02</i><b>By Fri 20 Nov</b><span>Share access to every channel and name one point of contact.</span></li>
+      <li><i>03</i><b>Week of 23 Nov</b><span>A 90-minute kick-off with both founders. First interviews recorded. Busy Fox audits the profiles and records baselines.</span></li>
+      <li><i>04</i><b>By Fri 27 Nov</b><span>PlantiqX asks the VEMS, FreightBid and furnace monitoring clients about case stories, using our one-page request. Summit date confirmed.</span></li>
+      <li><i>05</i><b>Mon 30 Nov</b><span>Month 1 starts. First posts go live that week.</span></li>
+    </ol>
+  </div>
+  <div class="foot"><div>PlantiqX · Prepared by Busy Fox · November 2026</div><div class="pn"></div></div>
+</section>
+
+<script>
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('.page'));
+  var total=pages.length;
+  function pad(n){return (n<10?'0':'')+n}
+  pages.forEach(function(p,i){var n=p.querySelector('.pn');if(n)n.textContent=pad(i+1)+' / '+pad(total);});
+  [].forEach.call(document.querySelectorAll('[data-toc]'),function(el){
+    var t=document.getElementById(el.getAttribute('data-toc'));
+    if(t){el.textContent=pad(pages.indexOf(t.closest('.page'))+1);}
+  });
+  function check(){
+    var bad=[];
+    var room=[];pages.forEach(function(p,i){var c=p.querySelector(".content");if(!c)return;var last=c.lastElementChild;var used=last?(last.getBoundingClientRect().bottom-c.getBoundingClientRect().top):0;room.push((i+1)+":"+Math.round(c.clientHeight-used));if(c.clientHeight>0&&c.scrollHeight>c.clientHeight+1){bad.push((i+1)+":"+(c.scrollHeight-c.clientHeight));}});document.body.setAttribute("data-room",room.join(","));
+    document.body.setAttribute('data-overflow',bad.join(',')||'none');
+  }
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(check);}else{check();}
+})();
+</script>
+</body>
+</html>

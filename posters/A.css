@@ -1,0 +1,27 @@
+/* Option A — Plant Floor: photo full-bleed, type on the photo */
+body{background:#121016;color:#fff;font-family:var(--f-body)}
+.ph{position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover}
+.shade{position:absolute;left:0;right:0}
+.shade.t{top:0;height:360px;background:linear-gradient(180deg,rgba(14,12,18,.78) 0%,rgba(14,12,18,.5) 45%,rgba(14,12,18,0) 100%)}
+.shade.t.big{height:920px;background:linear-gradient(180deg,rgba(14,12,18,.9) 0%,rgba(14,12,18,.84) 52%,rgba(14,12,18,.5) 74%,rgba(14,12,18,0) 100%)}
+.shade.b{bottom:0;height:300px;background:linear-gradient(0deg,rgba(14,12,18,.8) 0%,rgba(14,12,18,.45) 50%,rgba(14,12,18,0) 100%)}
+.shade.b.big{height:820px;background:linear-gradient(0deg,rgba(14,12,18,.9) 0%,rgba(14,12,18,.82) 46%,rgba(14,12,18,.42) 74%,rgba(14,12,18,0) 100%)}
+.hdr{position:absolute;left:60px;right:60px;top:60px;display:flex;justify-content:space-between;align-items:flex-start}
+.hdr .logo{display:block;height:54px;width:auto}
+.tag{font-family:var(--f-body);font-size:18px;color:rgba(255,255,255,.82);margin-top:16px;letter-spacing:.005em}
+.stat{font-family:var(--f-body);font-size:21px;font-weight:500;text-align:right;line-height:1.45;padding-top:4px}
+.stat .m{color:rgba(255,255,255,.78);font-weight:400}
+.stat .mk.live{color:var(--orange)}
+.copy{position:absolute;left:60px;right:60px}
+.copy.bottom{bottom:168px}
+.copy.top{top:200px}
+h1{font-family:var(--f-head);font-weight:700;font-size:86px;line-height:.98;letter-spacing:-.035em;max-width:940px;text-wrap:balance}
+h1 em{font-style:normal}
+.copy p{font-size:29px;line-height:1.4;color:rgba(255,255,255,.9);margin-top:28px;max-width:860px}
+.spec{font-family:var(--f-body);font-size:21px;font-weight:500;color:#fff;margin-top:22px;display:flex;align-items:center}
+.spec .sw{width:28px;height:4px;background:var(--orange);margin-right:14px}
+.ftr{position:absolute;left:60px;right:60px;bottom:60px;display:flex;justify-content:space-between;align-items:baseline;border-top:1.5px solid rgba(255,255,255,.4);padding-top:22px}
+.cta{font-family:var(--f-head);font-weight:600;font-size:28px;letter-spacing:-.01em}
+.cta b{color:var(--orange);font-weight:600;margin-left:12px}
+.url{font-family:var(--f-mono);font-size:19px;letter-spacing:.04em;color:rgba(255,255,255,.9)}
+.hdr .rt{text-align:right;display:flex;flex-direction:column;align-items:flex-end}
